@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Desarrollo Frontend con React | EduTech Academy</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar" role="navigation" aria-label="Navegación principal">
+    <div class="container">
+      <a href="index.html" class="navbar-brand">
+        <div class="brand-icon" aria-hidden="true">🎓</div>
+        <span>Edu<em>Tech</em></span>
+      </a>
+      <ul class="navbar-nav" role="list">
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="cursos.html" class="active">Cursos</a></li>
+        <li><a href="index.html#beneficios">Beneficios</a></li>
+      </ul>
+      <div class="navbar-actions">
+        <a href="login.html" class="btn btn-ghost btn-sm">Iniciar sesión</a>
+        <a href="registro.html" class="btn btn-primary btn-sm">Registrarse</a>
+        <button class="hamburger" id="hamburger" aria-label="Abrir menú" aria-expanded="false" aria-controls="mobile-nav">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+  <div class="mobile-nav" id="mobile-nav">
+    <a href="index.html">🏠 Inicio</a>
+    <a href="cursos.html">📚 Cursos</a>
+  </div>
+
+  <main class="page-content">
+
+    <!-- COURSE HERO -->
+    <section class="course-hero" aria-labelledby="course-title">
+      <div class="container">
+        <nav class="breadcrumb" aria-label="Ruta de navegación">
+          <a href="index.html" style="color:var(--gray-400);">Inicio</a>
+          <span class="separator" style="color:var(--gray-600);" aria-hidden="true">›</span>
+          <a href="cursos.html" style="color:var(--gray-400);">Cursos</a>
+          <span class="separator" style="color:var(--gray-600);" aria-hidden="true">›</span>
+          <span class="current" style="color:var(--gray-300);">Desarrollo Frontend con React</span>
+        </nav>
+        <span class="badge badge-accent no-dot" style="margin-bottom:var(--space-4);">Full Stack</span>
+        <h1 id="course-title">Desarrollo Frontend con React</h1>
+        <p style="color:var(--gray-300);font-size:var(--text-lg);max-width:700px;margin-top:var(--space-3);">
+          Aprende a construir interfaces modernas y escalables usando React 18, hooks, context API, React Router y buenas prácticas de arquitectura frontend.
+        </p>
+        <div class="course-hero-meta" role="list" aria-label="Información del curso">
+          <div class="course-hero-meta-item" role="listitem">⭐ <strong style="color:var(--white);">4.9</strong> (512 valoraciones)</div>
+          <div class="course-hero-meta-item" role="listitem">👥 <strong style="color:var(--white);">510</strong> estudiantes inscritos</div>
+          <div class="course-hero-meta-item" role="listitem">🕒 <strong style="color:var(--white);">60 horas</strong> de contenido</div>
+          <div class="course-hero-meta-item" role="listitem">📅 Actualizado: <strong style="color:var(--white);">Marzo 2024</strong></div>
+        </div>
+        <div style="display:flex;align-items:center;gap:var(--space-3);margin-top:var(--space-6);">
+          <div class="avatar" aria-label="Foto de María Torres">MT</div>
+          <div>
+            <div style="font-size:var(--text-sm);color:var(--white);font-weight:600;">María Torres</div>
+            <div style="font-size:var(--text-xs);color:var(--gray-400);">Arquitecta Full Stack · 8 años de experiencia</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTENT -->
+    <section class="section-sm">
+      <div class="container">
+        <div class="course-detail-layout">
+
+          <!-- LEFT: Main content -->
+          <div>
+            <div class="tabs" role="tablist" aria-label="Secciones del curso">
+              <button class="tab-item active" role="tab" aria-selected="true">Descripción</button>
+              <button class="tab-item" role="tab" aria-selected="false">Temario</button>
+              <button class="tab-item" role="tab" aria-selected="false">Docente</button>
+              <button class="tab-item" role="tab" aria-selected="false">Reseñas</button>
+            </div>
+
+            <!-- Descripción -->
+            <div class="card" style="margin-bottom:var(--space-6);">
+              <h2 class="card-title" style="font-size:var(--text-xl);margin-bottom:var(--space-4);">Sobre este curso</h2>
+              <p style="margin-bottom:var(--space-4);">
+                Este curso te llevará desde los fundamentos de React hasta el desarrollo de aplicaciones completas con manejo de estado, enrutamiento y consumo de APIs REST. Aprenderás con proyectos reales, siguiendo buenas prácticas del ecosistema frontend moderno.
+              </p>
+              <p>
+                Al finalizar, serás capaz de construir SPAs profesionales utilizando React 18, integrar librerías del ecosistema y gestionar proyectos con arquitectura escalable lista para producción.
+              </p>
+              <h3 style="font-size:var(--text-lg);margin-top:var(--space-6);margin-bottom:var(--space-4);">¿Qué aprenderás?</h3>
+              <div style="display:grid;grid-template-columns:1fr 1fr;gap:var(--space-2);">
+                <div style="display:flex;align-items:flex-start;gap:var(--space-2);font-size:var(--text-sm);">✅ <span>Componentes funcionales y JSX</span></div>
+                <div style="display:flex;align-items:flex-start;gap:var(--space-2);font-size:var(--text-sm);">✅ <span>useState, useEffect, useContext</span></div>
+                <div style="display:flex;align-items:flex-start;gap:var(--space-2);font-size:var(--text-sm);">✅ <span>React Router v6</span></div>
+                <div style="display:flex;align-items:flex-start;gap:var(--space-2);font-size:var(--text-sm);">✅ <span>Consumo de APIs con Axios</span></div>
+                <div style="display:flex;align-items:flex-start;gap:var(--space-2);font-size:var(--text-sm);">✅ <span>Redux Toolkit para estado global</span></div>
+                <div style="display:flex;align-items:flex-start;gap:var(--space-2);font-size:var(--text-sm);">✅ <span>Testing con Vitest + Testing Library</span></div>
+                <div style="display:flex;align-items:flex-start;gap:var(--space-2);font-size:var(--text-sm);">✅ <span>Deploy con Vite + Vercel</span></div>
+                <div style="display:flex;align-items:flex-start;gap:var(--space-2);font-size:var(--text-sm);">✅ <span>Proyecto final: SPA completa</span></div>
+              </div>
+            </div>
+
+            <!-- Temario -->
+            <div class="card" style="margin-bottom:var(--space-6);">
+              <h2 class="card-title" style="font-size:var(--text-xl);margin-bottom:var(--space-4);">Temario del curso</h2>
+              <p style="font-size:var(--text-sm);color:var(--text-muted);margin-bottom:var(--space-4);">8 módulos · 48 lecciones · 60 horas de contenido</p>
+
+              <!-- Módulo 1 -->
+              <details style="margin-bottom:var(--space-3);">
+                <summary style="font-weight:700;padding:var(--space-3) var(--space-4);background:var(--gray-50);border-radius:var(--border-radius);cursor:pointer;list-style:none;display:flex;justify-content:space-between;align-items:center;">
+                  <span>Módulo 1: Introducción a React</span>
+                  <span class="badge badge-gray no-dot">6 lecciones · 5h</span>
+                </summary>
+                <div style="padding:var(--space-4) var(--space-4) 0;">
+                  <div class="curriculum-item"><div class="curriculum-num">1</div><span class="curriculum-title">¿Qué es React y por qué usarlo?</span><span class="curriculum-duration">45 min</span></div>
+                  <div class="curriculum-item"><div class="curriculum-num">2</div><span class="curriculum-title">Configuración del entorno con Vite</span><span class="curriculum-duration">30 min</span></div>
+                  <div class="curriculum-item"><div class="curriculum-num">3</div><span class="curriculum-title">Componentes y JSX</span><span class="curriculum-duration">60 min</span></div>
+                  <div class="curriculum-item"><div class="curriculum-num">4</div><span class="curriculum-title">Props y comunicación entre componentes</span><span class="curriculum-duration">50 min</span></div>
+                  <div class="curriculum-item"><div class="curriculum-num">5</div><span class="curriculum-title">Listas, keys y renderizado condicional</span><span class="curriculum-duration">45 min</span></div>
+                  <div class="curriculum-item"><div class="curriculum-num">6</div><span class="curriculum-title">Proyecto: Galería de cursos estática</span><span class="curriculum-duration">90 min</span></div>
+                </div>
+              </details>
+
+              <details style="margin-bottom:var(--space-3);">
+                <summary style="font-weight:700;padding:var(--space-3) var(--space-4);background:var(--gray-50);border-radius:var(--border-radius);cursor:pointer;list-style:none;display:flex;justify-content:space-between;align-items:center;">
+                  <span>Módulo 2: Hooks esenciales</span>
+                  <span class="badge badge-gray no-dot">7 lecciones · 8h</span>
+                </summary>
+                <div style="padding:var(--space-4) var(--space-4) 0;">
+                  <div class="curriculum-item"><div class="curriculum-num">7</div><span class="curriculum-title">useState y manejo de estado local</span><span class="curriculum-duration">60 min</span></div>
+                  <div class="curriculum-item"><div class="curriculum-num">8</div><span class="curriculum-title">useEffect y ciclo de vida</span><span class="curriculum-duration">75 min</span></div>
+                  <div class="curriculum-item"><div class="curriculum-num">9</div><span class="curriculum-title">useRef y manipulación del DOM</span><span class="curriculum-duration">45 min</span></div>
+                </div>
+              </details>
+
+              <details style="margin-bottom:var(--space-3);">
+                <summary style="font-weight:700;padding:var(--space-3) var(--space-4);background:var(--gray-50);border-radius:var(--border-radius);cursor:pointer;list-style:none;display:flex;justify-content:space-between;align-items:center;">
+                  <span>Módulo 3: Consumo de APIs REST</span>
+                  <span class="badge badge-gray no-dot">6 lecciones · 7h</span>
+                </summary>
+              </details>
+              <details style="margin-bottom:var(--space-3);">
+                <summary style="font-weight:700;padding:var(--space-3) var(--space-4);background:var(--gray-50);border-radius:var(--border-radius);cursor:pointer;list-style:none;display:flex;justify-content:space-between;align-items:center;">
+                  <span>Módulo 4: React Router v6</span>
+                  <span class="badge badge-gray no-dot">5 lecciones · 6h</span>
+                </summary>
+              </details>
+            </div>
+
+            <!-- Docente -->
+            <div class="card">
+              <h2 class="card-title" style="font-size:var(--text-xl);margin-bottom:var(--space-5);">Sobre la docente</h2>
+              <div style="display:flex;align-items:flex-start;gap:var(--space-5);">
+                <div class="avatar lg" style="background:linear-gradient(135deg,#7c3aed,#ec4899);flex-shrink:0;" aria-label="Foto de María Torres">MT</div>
+                <div>
+                  <h3 style="font-size:var(--text-xl);margin-bottom:var(--space-1);">María Torres</h3>
+                  <p style="color:var(--accent-600);font-weight:600;font-size:var(--text-sm);margin-bottom:var(--space-3);">Arquitecta Full Stack · 8 años de experiencia</p>
+                  <div style="display:flex;gap:var(--space-4);font-size:var(--text-sm);color:var(--text-secondary);margin-bottom:var(--space-4);">
+                    <span>⭐ 4.9 promedio</span>
+                    <span>👥 1,840 estudiantes</span>
+                    <span>📚 6 cursos</span>
+                  </div>
+                  <p style="font-size:var(--text-sm);">Arquitecta de software especializada en sistemas distribuidos, React y Node.js. Ha trabajado en startups de fintech y healthtech, y actualmente es consultora de arquitectura para empresas en etapa de escala.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- RIGHT: Sticky card -->
+          <div class="course-sticky-card">
+            <div class="card" style="box-shadow:var(--shadow-xl);border:none;">
+              <div style="height:200px;background:linear-gradient(135deg,#1a1a2e,#7c3aed);border-radius:var(--border-radius);margin-bottom:var(--space-5);display:flex;align-items:center;justify-content:center;font-size:4rem;" aria-label="Preview del curso">⚡</div>
+
+              <div style="text-align:center;margin-bottom:var(--space-5);">
+                <div style="font-size:var(--text-4xl);font-weight:900;color:var(--primary-600);">S/ 180</div>
+                <div style="font-size:var(--text-sm);color:var(--text-muted);text-decoration:line-through;">S/ 250</div>
+                <span class="badge badge-danger no-dot" style="margin-top:var(--space-2);">28% descuento</span>
+              </div>
+
+              <a href="registro.html" class="btn btn-primary btn-lg w-full" style="margin-bottom:var(--space-3);">Inscribirse ahora</a>
+              <button type="button" class="btn btn-ghost w-full" style="margin-bottom:var(--space-5);">Agregar al carrito</button>
+
+              <div style="text-align:center;font-size:var(--text-xs);color:var(--text-muted);margin-bottom:var(--space-5);">30 días de garantía de devolución</div>
+
+              <div class="divider"></div>
+
+              <h4 style="font-size:var(--text-sm);font-weight:700;margin-bottom:var(--space-4);">Este curso incluye:</h4>
+              <ul style="display:flex;flex-direction:column;gap:var(--space-3);font-size:var(--text-sm);">
+                <li style="display:flex;align-items:center;gap:var(--space-2);">🎥 60 horas de video HD</li>
+                <li style="display:flex;align-items:center;gap:var(--space-2);">📁 Código fuente descargable</li>
+                <li style="display:flex;align-items:center;gap:var(--space-2);">📱 Acceso multiplataforma</li>
+                <li style="display:flex;align-items:center;gap:var(--space-2);">♾️ Acceso de por vida</li>
+                <li style="display:flex;align-items:center;gap:var(--space-2);">🏆 Certificado de finalización</li>
+                <li style="display:flex;align-items:center;gap:var(--space-2);">💬 Foro de soporte del docente</li>
+              </ul>
+
+              <div class="divider"></div>
+
+              <div style="display:flex;flex-direction:column;gap:var(--space-2);font-size:var(--text-sm);">
+                <div style="display:flex;justify-content:space-between;"><span style="color:var(--text-muted);">Modalidad</span><strong>Virtual + Híbrida</strong></div>
+                <div style="display:flex;justify-content:space-between;"><span style="color:var(--text-muted);">Horario</span><strong>Flexible / Grabado</strong></div>
+                <div style="display:flex;justify-content:space-between;"><span style="color:var(--text-muted);">Idioma</span><strong>Español</strong></div>
+                <div style="display:flex;justify-content:space-between;"><span style="color:var(--text-muted);">Nivel</span><strong>Intermedio</strong></div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer" aria-label="Pie de página">
+    <div class="container">
+      <div class="footer-bottom">
+        <span>© 2024 EduTech Academy.</span>
+        <a href="cursos.html" style="color:var(--primary-400);">← Volver al catálogo</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const btn = document.getElementById('hamburger');
+    const nav = document.getElementById('mobile-nav');
+    btn.addEventListener('click', () => {
+      const open = nav.classList.toggle('open');
+      btn.setAttribute('aria-expanded', open);
+    });
+    document.querySelectorAll('.tab-item').forEach(tab => {
+      tab.addEventListener('click', function() {
+        document.querySelectorAll('.tab-item').forEach(t => { t.classList.remove('active'); t.setAttribute('aria-selected','false'); });
+        this.classList.add('active');
+        this.setAttribute('aria-selected','true');
+      });
+    });
+  </script>
+</body>
+</html>

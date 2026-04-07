@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Iniciar sesión | EduTech Academy</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <main class="auth-page" role="main">
+    <div class="auth-card">
+
+      <!-- Logo -->
+      <div class="auth-logo">
+        <div class="logo-icon" aria-hidden="true">🎓</div>
+        <h1>Bienvenido de vuelta</h1>
+        <p>Ingresa a tu cuenta para continuar aprendiendo</p>
+      </div>
+
+      <!-- Alerta de ejemplo -->
+      <div class="alert alert-primary" role="alert" style="margin-bottom:var(--space-5);">
+        <span class="alert-icon" aria-hidden="true">ℹ️</span>
+        <div class="alert-content">
+          <div class="alert-title">Cuenta demo disponible</div>
+          <div>estudiante@edutech.pe / <strong>demo123</strong></div>
+        </div>
+      </div>
+
+      <!-- Formulario -->
+      <form action="dashboard-estudiante.html" method="get" aria-label="Formulario de inicio de sesión" novalidate>
+        <div class="form-group">
+          <label for="email" class="form-label">Correo electrónico <span class="required" aria-hidden="true">*</span></label>
+          <div class="input-wrapper">
+            <span class="input-icon" aria-hidden="true">✉️</span>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              class="form-control"
+              placeholder="tu@correo.edu.pe"
+              autocomplete="email"
+              required
+              aria-required="true"
+            />
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="password" class="form-label">Contraseña <span class="required" aria-hidden="true">*</span></label>
+          <div class="input-wrapper">
+            <span class="input-icon" aria-hidden="true">🔒</span>
+            <input
+              type="password"
+              id="password"
+              name="password"
+              class="form-control"
+              placeholder="Ingresa tu contraseña"
+              autocomplete="current-password"
+              required
+              aria-required="true"
+            />
+            <span class="input-suffix" id="toggle-pass" role="button" tabindex="0" aria-label="Mostrar/ocultar contraseña">👁️</span>
+          </div>
+        </div>
+
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:var(--space-6);">
+          <div class="checkbox-group">
+            <input type="checkbox" id="remember" name="remember" />
+            <label for="remember">Recordarme</label>
+          </div>
+          <a href="#" style="font-size:var(--text-sm);color:var(--primary-600);font-weight:600;">¿Olvidaste tu contraseña?</a>
+        </div>
+
+        <button type="submit" class="btn btn-primary w-full btn-lg">
+          Ingresar a mi cuenta →
+        </button>
+      </form>
+
+      <div class="auth-divider">o continúa con</div>
+
+      <div style="display:flex;gap:var(--space-3);">
+        <button type="button" class="btn btn-ghost w-full" aria-label="Iniciar sesión con Google">
+          🔵 Google
+        </button>
+        <button type="button" class="btn btn-ghost w-full" aria-label="Iniciar sesión con Microsoft">
+          🟦 Microsoft
+        </button>
+      </div>
+
+      <p class="auth-footer-text">
+        ¿No tienes cuenta? <a href="registro.html">Regístrate gratis</a>
+      </p>
+
+    </div>
+  </main>
+
+  <script>
+    const toggle = document.getElementById('toggle-pass');
+    const passInput = document.getElementById('password');
+    toggle.addEventListener('click', () => {
+      passInput.type = passInput.type === 'password' ? 'text' : 'password';
+    });
+    toggle.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter' || e.key === ' ') toggle.click();
+    });
+  </script>
+
+</body>
+</html>

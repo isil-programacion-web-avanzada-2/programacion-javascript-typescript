@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Catálogo de Cursos | EduTech Academy</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar" role="navigation" aria-label="Navegación principal">
+    <div class="container">
+      <a href="index.html" class="navbar-brand">
+        <div class="brand-icon" aria-hidden="true">🎓</div>
+        <span>Edu<em>Tech</em></span>
+      </a>
+      <ul class="navbar-nav" role="list">
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="cursos.html" class="active" aria-current="page">Cursos</a></li>
+        <li><a href="index.html#beneficios">Beneficios</a></li>
+      </ul>
+      <div class="navbar-actions">
+        <a href="login.html" class="btn btn-ghost btn-sm">Iniciar sesión</a>
+        <a href="registro.html" class="btn btn-primary btn-sm">Registrarse</a>
+        <button class="hamburger" id="hamburger" aria-label="Abrir menú" aria-expanded="false" aria-controls="mobile-nav">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+  <div class="mobile-nav" id="mobile-nav">
+    <a href="index.html">🏠 Inicio</a>
+    <a href="cursos.html">📚 Cursos</a>
+  </div>
+
+  <main class="page-content">
+
+    <!-- PAGE HEADER -->
+    <section style="background:linear-gradient(135deg,var(--gray-900),#1e1b4b);padding:var(--space-12) 0;" aria-labelledby="catalog-heading">
+      <div class="container">
+        <nav class="breadcrumb" aria-label="Ruta de navegación">
+          <a href="index.html">Inicio</a>
+          <span class="separator" aria-hidden="true">›</span>
+          <span class="current">Cursos</span>
+        </nav>
+        <h1 id="catalog-heading" style="color:var(--white);margin-bottom:var(--space-3);">Catálogo de cursos</h1>
+        <p style="color:var(--gray-400);font-size:var(--text-lg);">Explora nuestra oferta académica y encuentra el curso ideal para tu carrera.</p>
+      </div>
+    </section>
+
+    <section class="section-sm">
+      <div class="container">
+        <div style="display:grid;grid-template-columns:280px 1fr;gap:var(--space-8);align-items:start;" id="catalog-layout">
+
+          <!-- SIDEBAR FILTROS -->
+          <aside aria-label="Filtros de búsqueda" style="position:sticky;top:calc(var(--navbar-height) + var(--space-4));">
+            <div class="card">
+              <div class="card-header">
+                <h3 class="card-title" style="font-size:var(--text-base);">🔍 Filtros</h3>
+                <button class="btn btn-ghost btn-sm" type="button" aria-label="Limpiar filtros">Limpiar</button>
+              </div>
+
+              <div style="margin-bottom:var(--space-5);">
+                <div class="form-label" style="margin-bottom:var(--space-3);">Buscar curso</div>
+                <div class="search-bar">
+                  <span aria-hidden="true">🔍</span>
+                  <input type="search" placeholder="Nombre, docente, tecnología..." aria-label="Buscar curso" />
+                </div>
+              </div>
+
+              <div style="margin-bottom:var(--space-5);">
+                <div class="form-label" style="margin-bottom:var(--space-3);">Categoría</div>
+                <div style="display:flex;flex-direction:column;gap:var(--space-2);">
+                  <label class="checkbox-group">
+                    <input type="checkbox" checked aria-label="Filtrar por todas las categorías" /> Todos <span class="badge badge-gray no-dot" style="margin-left:auto;">48</span>
+                  </label>
+                  <label class="checkbox-group">
+                    <input type="checkbox" aria-label="Filtrar Frontend" /> Frontend <span class="badge badge-primary no-dot" style="margin-left:auto;">12</span>
+                  </label>
+                  <label class="checkbox-group">
+                    <input type="checkbox" aria-label="Filtrar Backend" /> Backend <span class="badge badge-success no-dot" style="margin-left:auto;">10</span>
+                  </label>
+                  <label class="checkbox-group">
+                    <input type="checkbox" aria-label="Filtrar Full Stack" /> Full Stack <span class="badge badge-accent no-dot" style="margin-left:auto;">8</span>
+                  </label>
+                  <label class="checkbox-group">
+                    <input type="checkbox" aria-label="Filtrar Seguridad" /> Seguridad <span class="badge badge-warning no-dot" style="margin-left:auto;">6</span>
+                  </label>
+                  <label class="checkbox-group">
+                    <input type="checkbox" aria-label="Filtrar Base de Datos" /> Base de Datos <span class="badge badge-gray no-dot" style="margin-left:auto;">7</span>
+                  </label>
+                  <label class="checkbox-group">
+                    <input type="checkbox" aria-label="Filtrar DevOps" /> DevOps <span class="badge badge-gray no-dot" style="margin-left:auto;">5</span>
+                  </label>
+                </div>
+              </div>
+
+              <div style="margin-bottom:var(--space-5);">
+                <div class="form-label" style="margin-bottom:var(--space-3);">Modalidad</div>
+                <div style="display:flex;flex-direction:column;gap:var(--space-2);">
+                  <label class="radio-group">
+                    <input type="radio" name="modalidad" checked aria-label="Todas las modalidades" /> Todas
+                  </label>
+                  <label class="radio-group">
+                    <input type="radio" name="modalidad" aria-label="Modalidad virtual" /> Virtual
+                  </label>
+                  <label class="radio-group">
+                    <input type="radio" name="modalidad" aria-label="Modalidad presencial" /> Presencial
+                  </label>
+                  <label class="radio-group">
+                    <input type="radio" name="modalidad" aria-label="Modalidad híbrida" /> Híbrida
+                  </label>
+                </div>
+              </div>
+
+              <div style="margin-bottom:var(--space-5);">
+                <div class="form-label" style="margin-bottom:var(--space-3);">Docente</div>
+                <select class="form-control" aria-label="Seleccionar docente">
+                  <option value="">Todos los docentes</option>
+                  <option>Juan Pérez</option>
+                  <option>María Torres</option>
+                  <option>Luis Ramírez</option>
+                </select>
+              </div>
+
+              <div>
+                <div class="form-label" style="margin-bottom:var(--space-3);">Duración</div>
+                <select class="form-control" aria-label="Seleccionar duración">
+                  <option value="">Cualquier duración</option>
+                  <option>0 – 20 horas</option>
+                  <option>20 – 40 horas</option>
+                  <option>40 – 60 horas</option>
+                  <option>60+ horas</option>
+                </select>
+              </div>
+            </div>
+          </aside>
+
+          <!-- RESULTADOS -->
+          <div>
+            <!-- Toolbar -->
+            <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:var(--space-6);flex-wrap:wrap;gap:var(--space-3);">
+              <p style="font-size:var(--text-sm);color:var(--text-secondary);">Mostrando <strong>48 cursos</strong></p>
+              <div style="display:flex;align-items:center;gap:var(--space-3);">
+                <label for="sort" class="form-label" style="margin:0;white-space:nowrap;">Ordenar por:</label>
+                <select id="sort" class="form-control" style="width:auto;" aria-label="Ordenar cursos">
+                  <option>Más populares</option>
+                  <option>Mejor valorados</option>
+                  <option>Más recientes</option>
+                  <option>Precio: menor a mayor</option>
+                </select>
+              </div>
+            </div>
+
+            <!-- Tabs por nivel -->
+            <div class="tabs" role="tablist" aria-label="Filtrar por nivel">
+              <button class="tab-item active" role="tab" aria-selected="true">Todos</button>
+              <button class="tab-item" role="tab" aria-selected="false">Básico</button>
+              <button class="tab-item" role="tab" aria-selected="false">Intermedio</button>
+              <button class="tab-item" role="tab" aria-selected="false">Avanzado</button>
+            </div>
+
+            <!-- Grid de cursos -->
+            <div class="grid grid-3" role="list" aria-label="Listado de cursos">
+
+              <article class="course-card" role="listitem">
+                <div class="course-card-image" style="background:linear-gradient(135deg,#1e3a5f,#2563eb);">
+                  <div class="course-thumb-placeholder" aria-hidden="true">⚛️</div>
+                  <span class="course-card-badge badge badge-primary no-dot">Frontend</span>
+                </div>
+                <div class="course-card-body">
+                  <div class="course-category">Frontend</div>
+                  <h3 class="course-title">Programación Web II</h3>
+                  <p class="course-instructor">👨‍🏫 Juan Pérez · <strong>4.8 ★</strong></p>
+                  <div class="course-meta">
+                    <span class="course-meta-item">🕒 40h</span>
+                    <span class="course-meta-item">📱 Virtual</span>
+                    <span class="course-meta-item">👥 320</span>
+                  </div>
+                </div>
+                <div class="course-card-footer">
+                  <div class="course-price"><span class="currency">S/</span> 120</div>
+                  <a href="detalle-curso.html" class="btn btn-primary btn-sm">Ver curso</a>
+                </div>
+              </article>
+
+              <article class="course-card" role="listitem">
+                <div class="course-card-image" style="background:linear-gradient(135deg,#1a1a2e,#7c3aed);">
+                  <div class="course-thumb-placeholder" aria-hidden="true">⚡</div>
+                  <span class="course-card-badge badge badge-accent no-dot">Full Stack</span>
+                </div>
+                <div class="course-card-body">
+                  <div class="course-category">Full Stack</div>
+                  <h3 class="course-title">Desarrollo Frontend con React</h3>
+                  <p class="course-instructor">👩‍🏫 María Torres · <strong>4.9 ★</strong></p>
+                  <div class="course-meta">
+                    <span class="course-meta-item">🕒 60h</span>
+                    <span class="course-meta-item">🖥️ Híbrida</span>
+                    <span class="course-meta-item">👥 510</span>
+                  </div>
+                </div>
+                <div class="course-card-footer">
+                  <div class="course-price"><span class="currency">S/</span> 180</div>
+                  <a href="detalle-curso.html" class="btn btn-primary btn-sm">Ver curso</a>
+                </div>
+              </article>
+
+              <article class="course-card" role="listitem">
+                <div class="course-card-image" style="background:linear-gradient(135deg,#064e3b,#059669);">
+                  <div class="course-thumb-placeholder" aria-hidden="true">🚀</div>
+                  <span class="course-card-badge badge badge-success no-dot">Backend</span>
+                </div>
+                <div class="course-card-body">
+                  <div class="course-category">Backend</div>
+                  <h3 class="course-title">Backend con Node.js</h3>
+                  <p class="course-instructor">👨‍🏫 Luis Ramírez · <strong>4.7 ★</strong></p>
+                  <div class="course-meta">
+                    <span class="course-meta-item">🕒 55h</span>
+                    <span class="course-meta-item">📱 Virtual</span>
+                    <span class="course-meta-item">👥 280</span>
+                  </div>
+                </div>
+                <div class="course-card-footer">
+                  <div class="course-price"><span class="currency">S/</span> 150</div>
+                  <a href="detalle-curso.html" class="btn btn-primary btn-sm">Ver curso</a>
+                </div>
+              </article>
+
+              <article class="course-card" role="listitem">
+                <div class="course-card-image" style="background:linear-gradient(135deg,#431407,#ea580c);">
+                  <div class="course-thumb-placeholder" aria-hidden="true">🔐</div>
+                  <span class="course-card-badge badge badge-warning no-dot">Seguridad</span>
+                </div>
+                <div class="course-card-body">
+                  <div class="course-category">Seguridad</div>
+                  <h3 class="course-title">Seguridad en Aplicaciones Web</h3>
+                  <p class="course-instructor">👨‍🏫 Juan Pérez · <strong>4.9 ★</strong></p>
+                  <div class="course-meta">
+                    <span class="course-meta-item">🕒 35h</span>
+                    <span class="course-meta-item">🖥️ Híbrida</span>
+                    <span class="course-meta-item">👥 190</span>
+                  </div>
+                </div>
+                <div class="course-card-footer">
+                  <div class="course-price"><span class="currency">S/</span> 200</div>
+                  <a href="detalle-curso.html" class="btn btn-primary btn-sm">Ver curso</a>
+                </div>
+              </article>
+
+              <article class="course-card" role="listitem">
+                <div class="course-card-image" style="background:linear-gradient(135deg,#1e1b4b,#4338ca);">
+                  <div class="course-thumb-placeholder" aria-hidden="true">🗃️</div>
+                  <span class="course-card-badge badge badge-primary no-dot">Base de Datos</span>
+                </div>
+                <div class="course-card-body">
+                  <div class="course-category">Base de Datos</div>
+                  <h3 class="course-title">Bases de Datos NoSQL</h3>
+                  <p class="course-instructor">👩‍🏫 María Torres · <strong>4.6 ★</strong></p>
+                  <div class="course-meta">
+                    <span class="course-meta-item">🕒 30h</span>
+                    <span class="course-meta-item">📱 Virtual</span>
+                    <span class="course-meta-item">👥 145</span>
+                  </div>
+                </div>
+                <div class="course-card-footer">
+                  <div class="course-price"><span class="free">Gratuito</span></div>
+                  <a href="detalle-curso.html" class="btn btn-success btn-sm">Ver curso</a>
+                </div>
+              </article>
+
+              <article class="course-card" role="listitem">
+                <div class="course-card-image" style="background:linear-gradient(135deg,#0c4a6e,#0891b2);">
+                  <div class="course-thumb-placeholder" aria-hidden="true">🔧</div>
+                  <span class="course-card-badge badge badge-gray no-dot">DevOps</span>
+                </div>
+                <div class="course-card-body">
+                  <div class="course-category">DevOps</div>
+                  <h3 class="course-title">DevOps y CI/CD con GitHub Actions</h3>
+                  <p class="course-instructor">👨‍🏫 Luis Ramírez · <strong>4.8 ★</strong></p>
+                  <div class="course-meta">
+                    <span class="course-meta-item">🕒 45h</span>
+                    <span class="course-meta-item">📱 Virtual</span>
+                    <span class="course-meta-item">👥 220</span>
+                  </div>
+                </div>
+                <div class="course-card-footer">
+                  <div class="course-price"><span class="currency">S/</span> 160</div>
+                  <a href="detalle-curso.html" class="btn btn-primary btn-sm">Ver curso</a>
+                </div>
+              </article>
+
+            </div>
+
+            <!-- Paginación -->
+            <nav class="pagination" aria-label="Paginación de cursos">
+              <button class="page-btn" disabled aria-label="Página anterior">‹</button>
+              <button class="page-btn active" aria-label="Página 1, página actual" aria-current="page">1</button>
+              <button class="page-btn" aria-label="Página 2">2</button>
+              <button class="page-btn" aria-label="Página 3">3</button>
+              <button class="page-btn" aria-label="Página 4">4</button>
+              <button class="page-btn" aria-label="Página siguiente">›</button>
+            </nav>
+          </div>
+
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer" aria-label="Pie de página">
+    <div class="container">
+      <div class="footer-bottom">
+        <span>© 2024 EduTech Academy. Todos los derechos reservados.</span>
+        <a href="index.html" style="color:var(--primary-400);">← Volver al inicio</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const btn = document.getElementById('hamburger');
+    const nav = document.getElementById('mobile-nav');
+    btn.addEventListener('click', () => {
+      const open = nav.classList.toggle('open');
+      btn.setAttribute('aria-expanded', open);
+    });
+    document.querySelectorAll('.tab-item').forEach(tab => {
+      tab.addEventListener('click', function() {
+        document.querySelectorAll('.tab-item').forEach(t => { t.classList.remove('active'); t.setAttribute('aria-selected','false'); });
+        this.classList.add('active');
+        this.setAttribute('aria-selected','true');
+      });
+    });
+  </script>
+</body>
+</html>

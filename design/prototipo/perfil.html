@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mi Perfil | EduTech Academy</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar" role="navigation" aria-label="Navegación del panel">
+    <div class="container">
+      <a href="index.html" class="navbar-brand">
+        <div class="brand-icon" aria-hidden="true">🎓</div>
+        <span>Edu<em>Tech</em></span>
+      </a>
+      <ul class="navbar-nav" role="list">
+        <li><a href="dashboard-estudiante.html">Mi panel</a></li>
+        <li><a href="cursos.html">Explorar</a></li>
+        <li><a href="mis-inscripciones.html">Mis cursos</a></li>
+      </ul>
+      <div class="navbar-actions">
+        <div class="navbar-user">
+          <div class="avatar" aria-hidden="true">CG</div>
+          <span style="font-size:var(--text-sm);font-weight:600;color:var(--gray-700);">Carlos G.</span>
+        </div>
+        <button class="hamburger" id="hamburger" aria-label="Abrir menú" aria-expanded="false" aria-controls="mobile-nav">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+  <div class="mobile-nav" id="mobile-nav">
+    <a href="dashboard-estudiante.html">🏠 Mi panel</a>
+    <a href="mis-inscripciones.html">📋 Mis inscripciones</a>
+    <a href="perfil.html">👤 Mi perfil</a>
+    <a href="login.html">🚪 Salir</a>
+  </div>
+
+  <div class="page-content">
+    <div class="layout-with-sidebar">
+
+      <!-- SIDEBAR -->
+      <aside class="sidebar" id="sidebar" aria-label="Menú lateral del estudiante">
+        <div class="sidebar-header">
+          <div class="sidebar-user">
+            <div class="avatar" aria-label="Foto de Carlos García">CG</div>
+            <div class="user-info"><div class="name">Carlos García</div><div class="role">Estudiante</div></div>
+          </div>
+          <div class="sidebar-title">Panel estudiantil</div>
+        </div>
+        <nav class="sidebar-nav" aria-label="Navegación">
+          <a href="dashboard-estudiante.html"><span class="nav-icon" aria-hidden="true">🏠</span> Inicio</a>
+          <a href="mis-inscripciones.html"><span class="nav-icon" aria-hidden="true">📚</span> Mis inscripciones<span class="sidebar-badge">3</span></a>
+          <a href="cursos.html"><span class="nav-icon" aria-hidden="true">🔍</span> Explorar</a>
+          
+          <div class="sidebar-section-label">Cuenta</div>
+          <a href="perfil.html" class="active" aria-current="page"><span class="nav-icon" aria-hidden="true">👤</span> Mi perfil</a>
+          <a href="login.html"><span class="nav-icon" aria-hidden="true">🚪</span> Cerrar sesión</a>
+        </nav>
+      </aside>
+
+      <!-- MAIN -->
+      <main class="main-content">
+        <nav class="breadcrumb" aria-label="Ruta de navegación">
+          <a href="dashboard-estudiante.html">Mi panel</a>
+          <span class="separator" aria-hidden="true">›</span>
+          <span class="current">Mi perfil</span>
+        </nav>
+
+        <!-- Profile header -->
+        <div style="background:linear-gradient(135deg,var(--gray-900),#1e1b4b);border-radius:var(--border-radius-xl);padding:var(--space-10) var(--space-8);margin-bottom:var(--space-8);position:relative;overflow:hidden;">
+          <div style="position:absolute;top:-60px;right:-60px;width:300px;height:300px;border-radius:50%;background:radial-gradient(circle,rgba(124,58,237,.2),transparent 70%);" aria-hidden="true"></div>
+          <div style="display:flex;align-items:flex-end;gap:var(--space-6);position:relative;z-index:1;flex-wrap:wrap;">
+            <div style="position:relative;">
+              <div class="avatar xl" aria-label="Foto de perfil de Carlos García">CG</div>
+              <button style="position:absolute;bottom:0;right:0;width:28px;height:28px;background:var(--primary-600);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:0.75rem;cursor:pointer;border:2px solid var(--white);" aria-label="Cambiar foto de perfil">✏️</button>
+            </div>
+            <div style="flex:1;">
+              <h1 style="color:var(--white);font-size:var(--text-3xl);margin-bottom:var(--space-1);">Carlos García López</h1>
+              <p style="color:var(--primary-400);font-weight:600;font-size:var(--text-base);margin-bottom:var(--space-3);">Estudiante · Ingeniería de Sistemas</p>
+              <p style="color:var(--gray-400);font-size:var(--text-sm);">Lima, Perú · Miembro desde enero 2024</p>
+            </div>
+            <button class="btn btn-primary btn-sm">✏️ Editar perfil</button>
+          </div>
+        </div>
+
+        <div style="display:grid;grid-template-columns:1fr 340px;gap:var(--space-6);">
+
+          <!-- Left: Info personal + académica -->
+          <div style="display:flex;flex-direction:column;gap:var(--space-6);">
+
+            <!-- Información personal -->
+            <div class="card">
+              <div class="card-header">
+                <h2 class="card-title">Información personal</h2>
+                <button class="btn btn-ghost btn-sm">Editar</button>
+              </div>
+              <div class="form-row cols-2" style="margin-bottom:var(--space-5);">
+                <div class="form-group" style="margin-bottom:0;">
+                  <div class="form-label">Nombre</div>
+                  <div style="padding:var(--space-3) var(--space-4);background:var(--gray-50);border:1px solid var(--border-color);border-radius:var(--border-radius);font-size:var(--text-sm);color:var(--text-primary);">Carlos</div>
+                </div>
+                <div class="form-group" style="margin-bottom:0;">
+                  <div class="form-label">Apellidos</div>
+                  <div style="padding:var(--space-3) var(--space-4);background:var(--gray-50);border:1px solid var(--border-color);border-radius:var(--border-radius);font-size:var(--text-sm);color:var(--text-primary);">García López</div>
+                </div>
+              </div>
+              <div class="form-group">
+                <div class="form-label">Correo electrónico</div>
+                <div style="padding:var(--space-3) var(--space-4);background:var(--gray-50);border:1px solid var(--border-color);border-radius:var(--border-radius);font-size:var(--text-sm);color:var(--text-primary);display:flex;align-items:center;justify-content:space-between;">
+                  <span>cgarcia@edutech.pe</span>
+                  <span class="badge badge-success no-dot" style="font-size:10px;">Verificado</span>
+                </div>
+              </div>
+              <div class="form-row cols-2">
+                <div class="form-group" style="margin-bottom:0;">
+                  <div class="form-label">Teléfono</div>
+                  <div style="padding:var(--space-3) var(--space-4);background:var(--gray-50);border:1px solid var(--border-color);border-radius:var(--border-radius);font-size:var(--text-sm);color:var(--text-primary);">+51 987 654 321</div>
+                </div>
+                <div class="form-group" style="margin-bottom:0;">
+                  <div class="form-label">País</div>
+                  <div style="padding:var(--space-3) var(--space-4);background:var(--gray-50);border:1px solid var(--border-color);border-radius:var(--border-radius);font-size:var(--text-sm);color:var(--text-primary);">Perú</div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Datos académicos -->
+            <div class="card">
+              <div class="card-header">
+                <h2 class="card-title">Datos académicos</h2>
+                <button class="btn btn-ghost btn-sm">Editar</button>
+              </div>
+              <div class="form-row cols-2" style="margin-bottom:var(--space-5);">
+                <div class="form-group" style="margin-bottom:0;">
+                  <div class="form-label">Programa académico</div>
+                  <div style="padding:var(--space-3) var(--space-4);background:var(--gray-50);border:1px solid var(--border-color);border-radius:var(--border-radius);font-size:var(--text-sm);">Ingeniería de Sistemas</div>
+                </div>
+                <div class="form-group" style="margin-bottom:0;">
+                  <div class="form-label">Ciclo / Semestre</div>
+                  <div style="padding:var(--space-3) var(--space-4);background:var(--gray-50);border:1px solid var(--border-color);border-radius:var(--border-radius);font-size:var(--text-sm);">7mo ciclo</div>
+                </div>
+              </div>
+              <div class="form-group">
+                <div class="form-label">Universidad</div>
+                <div style="padding:var(--space-3) var(--space-4);background:var(--gray-50);border:1px solid var(--border-color);border-radius:var(--border-radius);font-size:var(--text-sm);">Universidad Nacional de Ingeniería</div>
+              </div>
+              <div class="form-group">
+                <div class="form-label">Objetivos de aprendizaje</div>
+                <div style="padding:var(--space-3) var(--space-4);background:var(--gray-50);border:1px solid var(--border-color);border-radius:var(--border-radius);font-size:var(--text-sm);line-height:1.6;color:var(--text-secondary);">
+                  Especializarme en desarrollo full-stack con React y Node.js para trabajar en startups de tecnología y eventualmente emprender un proyecto propio.
+                </div>
+              </div>
+            </div>
+
+            <!-- Cambiar contraseña -->
+            <div class="card">
+              <div class="card-header">
+                <h2 class="card-title">Seguridad de la cuenta</h2>
+              </div>
+              <form aria-label="Formulario de cambio de contraseña" novalidate>
+                <div class="form-group">
+                  <label for="pass-actual" class="form-label">Contraseña actual <span class="required" aria-hidden="true">*</span></label>
+                  <input type="password" id="pass-actual" class="form-control" placeholder="••••••••" autocomplete="current-password" />
+                </div>
+                <div class="form-row cols-2">
+                  <div class="form-group" style="margin-bottom:0;">
+                    <label for="pass-nueva" class="form-label">Nueva contraseña <span class="required" aria-hidden="true">*</span></label>
+                    <input type="password" id="pass-nueva" class="form-control" placeholder="••••••••" autocomplete="new-password" />
+                  </div>
+                  <div class="form-group" style="margin-bottom:0;">
+                    <label for="pass-confirmar" class="form-label">Confirmar contraseña <span class="required" aria-hidden="true">*</span></label>
+                    <input type="password" id="pass-confirmar" class="form-control" placeholder="••••••••" autocomplete="new-password" />
+                  </div>
+                </div>
+                <div class="form-actions">
+                  <button type="submit" class="btn btn-primary btn-sm">Actualizar contraseña</button>
+                </div>
+              </form>
+            </div>
+
+          </div>
+
+          <!-- Right: Stats + badges -->
+          <div style="display:flex;flex-direction:column;gap:var(--space-6);">
+
+            <!-- Resumen académico -->
+            <div class="card" style="text-align:center;">
+              <h3 class="card-title" style="margin-bottom:var(--space-5);">Mi actividad</h3>
+              <div style="display:grid;grid-template-columns:1fr 1fr;gap:var(--space-4);margin-bottom:var(--space-5);">
+                <div style="padding:var(--space-4);background:var(--primary-50);border-radius:var(--border-radius);">
+                  <div style="font-size:var(--text-2xl);font-weight:900;color:var(--primary-600);">3</div>
+                  <div style="font-size:var(--text-xs);color:var(--text-muted);">Cursos inscritos</div>
+                </div>
+                <div style="padding:var(--space-4);background:var(--success-100);border-radius:var(--border-radius);">
+                  <div style="font-size:var(--text-2xl);font-weight:900;color:var(--success-600);">1</div>
+                  <div style="font-size:var(--text-xs);color:var(--text-muted);">Completados</div>
+                </div>
+                <div style="padding:var(--space-4);background:var(--accent-100);border-radius:var(--border-radius);">
+                  <div style="font-size:var(--text-2xl);font-weight:900;color:var(--accent-600);">87</div>
+                  <div style="font-size:var(--text-xs);color:var(--text-muted);">Horas totales</div>
+                </div>
+                <div style="padding:var(--space-4);background:var(--warning-100);border-radius:var(--border-radius);">
+                  <div style="font-size:var(--text-2xl);font-weight:900;color:var(--warning-600);">1</div>
+                  <div style="font-size:var(--text-xs);color:var(--text-muted);">Certificados</div>
+                </div>
+              </div>
+              <a href="mis-inscripciones.html" class="btn btn-ghost w-full btn-sm">Ver mis cursos →</a>
+            </div>
+
+            <!-- Certificados -->
+            <div class="card">
+              <h3 class="card-title" style="margin-bottom:var(--space-5);">Certificados obtenidos</h3>
+              <div style="padding:var(--space-4);border:2px solid var(--success-600);border-radius:var(--border-radius-lg);background:var(--success-100);margin-bottom:var(--space-4);">
+                <div style="display:flex;align-items:center;gap:var(--space-3);">
+                  <span style="font-size:2rem;" aria-hidden="true">🏆</span>
+                  <div>
+                    <div style="font-weight:700;font-size:var(--text-sm);color:var(--gray-900);">Programación Web II</div>
+                    <div style="font-size:var(--text-xs);color:var(--success-600);font-weight:600;">Completado · Marzo 2024</div>
+                  </div>
+                </div>
+              </div>
+              <button class="btn btn-ghost w-full btn-sm" aria-label="Ver todos los certificados">Ver todos →</button>
+            </div>
+
+            <!-- Habilidades / badges -->
+            <div class="card">
+              <h3 class="card-title" style="margin-bottom:var(--space-5);">Tecnologías aprendidas</h3>
+              <div style="display:flex;flex-wrap:wrap;gap:var(--space-2);">
+                <span class="badge badge-primary no-dot">HTML5</span>
+                <span class="badge badge-primary no-dot">CSS3</span>
+                <span class="badge badge-primary no-dot">JavaScript</span>
+                <span class="badge badge-accent no-dot">React</span>
+                <span class="badge badge-success no-dot">Node.js</span>
+                <span class="badge badge-gray no-dot">Git</span>
+                <span class="badge badge-gray no-dot">MongoDB</span>
+                <span class="badge badge-gray no-dot">REST APIs</span>
+              </div>
+            </div>
+
+            <!-- Configuración de notificaciones -->
+            <div class="card">
+              <h3 class="card-title" style="margin-bottom:var(--space-5);">Notificaciones</h3>
+              <div style="display:flex;flex-direction:column;gap:var(--space-4);">
+                <div class="checkbox-group" style="justify-content:space-between;">
+                  <label for="notif-email">Email de clases</label>
+                  <input type="checkbox" id="notif-email" checked style="width:16px;height:16px;" aria-label="Recibir notificaciones de clases por email" />
+                </div>
+                <div class="checkbox-group" style="justify-content:space-between;">
+                  <label for="notif-eval">Recordatorios de evaluaciones</label>
+                  <input type="checkbox" id="notif-eval" checked style="width:16px;height:16px;" aria-label="Recibir recordatorios de evaluaciones" />
+                </div>
+                <div class="checkbox-group" style="justify-content:space-between;">
+                  <label for="notif-news">Nuevos cursos disponibles</label>
+                  <input type="checkbox" id="notif-news" style="width:16px;height:16px;" aria-label="Recibir notificaciones de nuevos cursos" />
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </main>
+    </div>
+  </div>
+
+  <script>
+    const btn = document.getElementById('hamburger');
+    const nav = document.getElementById('mobile-nav');
+    btn.addEventListener('click', () => { const open = nav.classList.toggle('open'); btn.setAttribute('aria-expanded', open); });
+  </script>
+</body>
+</html>

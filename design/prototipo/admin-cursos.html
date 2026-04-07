@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gestión de Cursos | EduTech Academy Admin</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <nav class="navbar" role="navigation" aria-label="Navegación administrativa">
+    <div class="container">
+      <a href="index.html" class="navbar-brand">
+        <div class="brand-icon" aria-hidden="true">🎓</div>
+        <span>Edu<em>Tech</em> <span style="font-size:var(--text-xs);font-weight:700;background:var(--danger-600);color:var(--white);padding:2px 8px;border-radius:var(--border-radius-full);">ADMIN</span></span>
+      </a>
+      <ul class="navbar-nav" role="list">
+        <li><a href="admin-dashboard.html">Dashboard</a></li>
+        <li><a href="admin-cursos.html" class="active" aria-current="page">Cursos</a></li>
+        <li><a href="admin-estudiantes.html">Estudiantes</a></li>
+        <li><a href="admin-docentes.html">Docentes</a></li>
+      </ul>
+      <div class="navbar-actions">
+        <div class="navbar-user">
+          <div class="avatar" style="background:linear-gradient(135deg,var(--danger-600),#9333ea);" aria-label="Administrador">AD</div>
+          <span style="font-size:var(--text-sm);font-weight:600;color:var(--gray-700);">Admin</span>
+        </div>
+        <button class="hamburger" id="hamburger" aria-label="Abrir menú" aria-expanded="false" aria-controls="mobile-nav">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+  <div class="mobile-nav" id="mobile-nav">
+    <a href="admin-dashboard.html">📊 Dashboard</a>
+    <a href="admin-cursos.html">📚 Cursos</a>
+    <a href="admin-estudiantes.html">👥 Estudiantes</a>
+    <a href="admin-docentes.html">👨‍🏫 Docentes</a>
+  </div>
+
+  <div class="page-content">
+    <div class="layout-with-sidebar">
+
+      <aside class="sidebar" id="sidebar" aria-label="Menú de administración">
+        <div class="sidebar-header">
+          <div class="sidebar-user">
+            <div class="avatar" style="background:linear-gradient(135deg,var(--danger-600),#9333ea);" aria-label="Administrador">AD</div>
+            <div class="user-info"><div class="name">Administrador</div><div class="role">Super Admin</div></div>
+          </div>
+          <div class="sidebar-title">Panel de control</div>
+        </div>
+        <nav class="sidebar-nav" aria-label="Navegación administrativa">
+          <a href="admin-dashboard.html"><span class="nav-icon" aria-hidden="true">📊</span> Dashboard</a>
+          <div class="sidebar-section-label">Gestión académica</div>
+          <a href="admin-cursos.html" class="active" aria-current="page"><span class="nav-icon" aria-hidden="true">📚</span> Cursos<span class="sidebar-badge">48</span></a>
+          <a href="admin-estudiantes.html"><span class="nav-icon" aria-hidden="true">👥</span> Estudiantes<span class="sidebar-badge">1240</span></a>
+          <a href="admin-docentes.html"><span class="nav-icon" aria-hidden="true">👨‍🏫</span> Docentes<span class="sidebar-badge">12</span></a>
+          <div class="sidebar-section-label">Sistema</div>
+          <a href="login.html"><span class="nav-icon" aria-hidden="true">🚪</span> Cerrar sesión</a>
+        </nav>
+      </aside>
+
+      <main class="main-content">
+        <nav class="breadcrumb" aria-label="Ruta de navegación">
+          <a href="admin-dashboard.html">Dashboard</a>
+          <span class="separator" aria-hidden="true">›</span>
+          <span class="current">Gestión de cursos</span>
+        </nav>
+
+        <div class="page-header">
+          <div class="page-header-row">
+            <div>
+              <h1 class="page-title">Gestión de cursos</h1>
+              <p class="page-subtitle">Administra el catálogo completo de cursos de la plataforma.</p>
+            </div>
+            <button class="btn btn-primary" onclick="alert('Modal: Nuevo Curso')">+ Nuevo curso</button>
+          </div>
+        </div>
+
+        <!-- Filtros / Búsqueda -->
+        <div class="card" style="margin-bottom:var(--space-6);">
+          <div style="display:flex;gap:var(--space-4);align-items:center;flex-wrap:wrap;">
+            <div class="search-bar" style="flex:1;min-width:200px;" aria-label="Buscar curso">
+              <span aria-hidden="true">🔍</span>
+              <input type="search" placeholder="Buscar por nombre, docente, categoría..." aria-label="Buscar curso" />
+            </div>
+            <select class="form-control" style="width:auto;" aria-label="Filtrar por categoría">
+              <option>Todas las categorías</option>
+              <option>Frontend</option>
+              <option>Backend</option>
+              <option>Full Stack</option>
+              <option>Seguridad</option>
+            </select>
+            <select class="form-control" style="width:auto;" aria-label="Filtrar por estado">
+              <option>Todos los estados</option>
+              <option>Activo</option>
+              <option>Inactivo</option>
+              <option>Borrador</option>
+            </select>
+          </div>
+        </div>
+
+        <!-- Tabla de cursos -->
+        <div class="table-wrapper">
+          <table class="table" aria-label="Tabla de gestión de cursos">
+            <thead>
+              <tr>
+                <th scope="col">Curso</th>
+                <th scope="col">Docente</th>
+                <th scope="col">Categoría</th>
+                <th scope="col">Inscritos</th>
+                <th scope="col">Rating</th>
+                <th scope="col">Precio</th>
+                <th scope="col">Estado</th>
+                <th scope="col">Acciones</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>
+                  <div class="user-cell">
+                    <div style="width:42px;height:42px;background:linear-gradient(135deg,#1a1a2e,#7c3aed);border-radius:var(--border-radius);display:flex;align-items:center;justify-content:center;font-size:1.25rem;flex-shrink:0;" aria-hidden="true">⚡</div>
+                    <div class="user-info">
+                      <div class="name">Desarrollo Frontend con React</div>
+                      <div class="sub">60 horas · Virtual</div>
+                    </div>
+                  </div>
+                </td>
+                <td>María Torres</td>
+                <td><span class="badge badge-accent no-dot">Full Stack</span></td>
+                <td><strong>510</strong></td>
+                <td>⭐ 4.9</td>
+                <td><strong>S/ 180</strong></td>
+                <td><span class="badge badge-success">Activo</span></td>
+                <td>
+                  <div class="td-actions">
+                    <button class="btn btn-ghost btn-icon btn-sm" title="Editar" aria-label="Editar curso">✏️</button>
+                    <button class="btn btn-ghost btn-icon btn-sm" title="Desactivar" aria-label="Desactivar curso">🔕</button>
+                    <button class="btn btn-ghost btn-icon btn-sm" title="Eliminar" aria-label="Eliminar curso" style="color:var(--danger-600);">🗑️</button>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="user-cell">
+                    <div style="width:42px;height:42px;background:linear-gradient(135deg,#1e3a5f,#2563eb);border-radius:var(--border-radius);display:flex;align-items:center;justify-content:center;font-size:1.25rem;flex-shrink:0;" aria-hidden="true">⚛️</div>
+                    <div class="user-info">
+                      <div class="name">Programación Web II</div>
+                      <div class="sub">40 horas · Virtual</div>
+                    </div>
+                  </div>
+                </td>
+                <td>Juan Pérez</td>
+                <td><span class="badge badge-primary no-dot">Frontend</span></td>
+                <td><strong>320</strong></td>
+                <td>⭐ 4.8</td>
+                <td><strong>S/ 120</strong></td>
+                <td><span class="badge badge-success">Activo</span></td>
+                <td>
+                  <div class="td-actions">
+                    <button class="btn btn-ghost btn-icon btn-sm" title="Editar" aria-label="Editar curso">✏️</button>
+                    <button class="btn btn-ghost btn-icon btn-sm" title="Desactivar" aria-label="Desactivar curso">🔕</button>
+                    <button class="btn btn-ghost btn-icon btn-sm" title="Eliminar" aria-label="Eliminar curso" style="color:var(--danger-600);">🗑️</button>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="user-cell">
+                    <div style="width:42px;height:42px;background:linear-gradient(135deg,#064e3b,#059669);border-radius:var(--border-radius);display:flex;align-items:center;justify-content:center;font-size:1.25rem;flex-shrink:0;" aria-hidden="true">🚀</div>
+                    <div class="user-info">
+                      <div class="name">Backend con Node.js</div>
+                      <div class="sub">55 horas · Virtual</div>
+                    </div>
+                  </div>
+                </td>
+                <td>Luis Ramírez</td>
+                <td><span class="badge badge-success no-dot">Backend</span></td>
+                <td><strong>280</strong></td>
+                <td>⭐ 4.7</td>
+                <td><strong>S/ 150</strong></td>
+                <td><span class="badge badge-success">Activo</span></td>
+                <td>
+                  <div class="td-actions">
+                    <button class="btn btn-ghost btn-icon btn-sm" title="Editar" aria-label="Editar curso">✏️</button>
+                    <button class="btn btn-ghost btn-icon btn-sm" title="Desactivar" aria-label="Desactivar curso">🔕</button>
+                    <button class="btn btn-ghost btn-icon btn-sm" title="Eliminar" aria-label="Eliminar curso" style="color:var(--danger-600);">🗑️</button>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="user-cell">
+                    <div style="width:42px;height:42px;background:linear-gradient(135deg,#431407,#ea580c);border-radius:var(--border-radius);display:flex;align-items:center;justify-content:center;font-size:1.25rem;flex-shrink:0;" aria-hidden="true">🔐</div>
+                    <div class="user-info">
+                      <div class="name">Seguridad en Aplicaciones Web</div>
+                      <div class="sub">35 horas · Híbrida</div>
+                    </div>
+                  </div>
+                </td>
+                <td>Juan Pérez</td>
+                <td><span class="badge badge-warning no-dot">Seguridad</span></td>
+                <td><strong>190</strong></td>
+                <td>⭐ 4.9</td>
+                <td><strong>S/ 200</strong></td>
+                <td><span class="badge badge-success">Activo</span></td>
+                <td>
+                  <div class="td-actions">
+                    <button class="btn btn-ghost btn-icon btn-sm" title="Editar" aria-label="Editar curso">✏️</button>
+                    <button class="btn btn-ghost btn-icon btn-sm" title="Desactivar" aria-label="Desactivar curso">🔕</button>
+                    <button class="btn btn-ghost btn-icon btn-sm" title="Eliminar" aria-label="Eliminar curso" style="color:var(--danger-600);">🗑️</button>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="user-cell">
+                    <div style="width:42px;height:42px;background:linear-gradient(135deg,#1e1b4b,#4338ca);border-radius:var(--border-radius);display:flex;align-items:center;justify-content:center;font-size:1.25rem;flex-shrink:0;" aria-hidden="true">🗃️</div>
+                    <div class="user-info">
+                      <div class="name">Bases de Datos NoSQL</div>
+                      <div class="sub">30 horas · Virtual</div>
+                    </div>
+                  </div>
+                </td>
+                <td>María Torres</td>
+                <td><span class="badge badge-primary no-dot">Base de Datos</span></td>
+                <td><strong>145</strong></td>
+                <td>⭐ 4.6</td>
+                <td><strong>Gratuito</strong></td>
+                <td><span class="badge badge-success">Activo</span></td>
+                <td>
+                  <div class="td-actions">
+                    <button class="btn btn-ghost btn-icon btn-sm" title="Editar" aria-label="Editar curso">✏️</button>
+                    <button class="btn btn-ghost btn-icon btn-sm" title="Desactivar" aria-label="Desactivar curso">🔕</button>
+                    <button class="btn btn-ghost btn-icon btn-sm" title="Eliminar" aria-label="Eliminar curso" style="color:var(--danger-600);">🗑️</button>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="user-cell">
+                    <div style="width:42px;height:42px;background:var(--gray-200);border-radius:var(--border-radius);display:flex;align-items:center;justify-content:center;font-size:1.25rem;flex-shrink:0;" aria-hidden="true">📝</div>
+                    <div class="user-info">
+                      <div class="name">Microservicios con Spring Boot</div>
+                      <div class="sub">50 horas · Virtual</div>
+                    </div>
+                  </div>
+                </td>
+                <td>Luis Ramírez</td>
+                <td><span class="badge badge-gray no-dot">Backend</span></td>
+                <td><strong>0</strong></td>
+                <td>—</td>
+                <td><strong>S/ 220</strong></td>
+                <td><span class="badge badge-gray">Borrador</span></td>
+                <td>
+                  <div class="td-actions">
+                    <button class="btn btn-ghost btn-icon btn-sm" title="Editar" aria-label="Editar curso">✏️</button>
+                    <button class="btn btn-primary btn-sm" aria-label="Publicar curso">Publicar</button>
+                    <button class="btn btn-ghost btn-icon btn-sm" title="Eliminar" aria-label="Eliminar curso" style="color:var(--danger-600);">🗑️</button>
+                  </div>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <nav class="pagination" aria-label="Paginación">
+          <button class="page-btn" disabled aria-label="Anterior">‹</button>
+          <button class="page-btn active" aria-current="page">1</button>
+          <button class="page-btn">2</button>
+          <button class="page-btn">3</button>
+          <button class="page-btn" aria-label="Siguiente">›</button>
+        </nav>
+
+      </main>
+    </div>
+  </div>
+
+  <script>
+    const btn = document.getElementById('hamburger');
+    const nav = document.getElementById('mobile-nav');
+    btn.addEventListener('click', () => { const open = nav.classList.toggle('open'); btn.setAttribute('aria-expanded', open); });
+  </script>
+</body>
+</html>

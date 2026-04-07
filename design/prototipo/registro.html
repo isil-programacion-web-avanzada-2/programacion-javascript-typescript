@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Crear cuenta | EduTech Academy</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <main class="auth-page" role="main" style="padding:var(--space-12) var(--space-4);">
+    <div class="auth-card" style="max-width:560px;">
+
+      <!-- Logo -->
+      <div class="auth-logo">
+        <div class="logo-icon" aria-hidden="true">✨</div>
+        <h1>Crear cuenta</h1>
+        <p>Regístrate gratis y empieza a aprender hoy mismo</p>
+      </div>
+
+      <!-- Formulario -->
+      <form action="dashboard-estudiante.html" method="get" aria-label="Formulario de registro" novalidate>
+
+        <div class="form-row cols-2">
+          <div class="form-group">
+            <label for="nombre" class="form-label">Nombre <span class="required" aria-hidden="true">*</span></label>
+            <input
+              type="text"
+              id="nombre"
+              name="nombre"
+              class="form-control"
+              placeholder="Ej. Carlos"
+              autocomplete="given-name"
+              required
+              aria-required="true"
+            />
+          </div>
+          <div class="form-group">
+            <label for="apellidos" class="form-label">Apellidos <span class="required" aria-hidden="true">*</span></label>
+            <input
+              type="text"
+              id="apellidos"
+              name="apellidos"
+              class="form-control"
+              placeholder="Ej. García López"
+              autocomplete="family-name"
+              required
+              aria-required="true"
+            />
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="email" class="form-label">Correo electrónico <span class="required" aria-hidden="true">*</span></label>
+          <div class="input-wrapper">
+            <span class="input-icon" aria-hidden="true">✉️</span>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              class="form-control"
+              placeholder="tu@correo.edu.pe"
+              autocomplete="email"
+              required
+              aria-required="true"
+            />
+          </div>
+          <p class="form-hint">Usa tu correo institucional si tienes acceso al plan universitario.</p>
+        </div>
+
+        <div class="form-group">
+          <label for="programa" class="form-label">Programa académico</label>
+          <select id="programa" name="programa" class="form-control" aria-label="Seleccionar programa académico">
+            <option value="">— Selecciona tu programa —</option>
+            <option>Ingeniería de Sistemas</option>
+            <option>Ingeniería de Software</option>
+            <option>Ciencias de la Computación</option>
+            <option>Ingeniería Informática</option>
+            <option>Otro</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="password" class="form-label">Contraseña <span class="required" aria-hidden="true">*</span></label>
+          <div class="input-wrapper">
+            <span class="input-icon" aria-hidden="true">🔒</span>
+            <input
+              type="password"
+              id="password"
+              name="password"
+              class="form-control"
+              placeholder="Mínimo 8 caracteres"
+              autocomplete="new-password"
+              required
+              aria-required="true"
+              minlength="8"
+            />
+            <span class="input-suffix" id="toggle-pass" role="button" tabindex="0" aria-label="Mostrar/ocultar contraseña">👁️</span>
+          </div>
+          <p class="form-hint">Usa al menos 8 caracteres, una mayúscula y un número.</p>
+        </div>
+
+        <div class="form-group">
+          <label for="confirm-password" class="form-label">Confirmar contraseña <span class="required" aria-hidden="true">*</span></label>
+          <div class="input-wrapper">
+            <span class="input-icon" aria-hidden="true">🔒</span>
+            <input
+              type="password"
+              id="confirm-password"
+              name="confirm_password"
+              class="form-control"
+              placeholder="Repite tu contraseña"
+              autocomplete="new-password"
+              required
+              aria-required="true"
+            />
+          </div>
+        </div>
+
+        <div class="form-group" style="margin-bottom:var(--space-6);">
+          <div class="checkbox-group" style="align-items:flex-start;gap:var(--space-3);">
+            <input type="checkbox" id="terms" name="terms" required aria-required="true" style="margin-top:3px;" />
+            <label for="terms" style="font-size:var(--text-sm);color:var(--gray-700);">
+              Acepto los <a href="#" style="color:var(--primary-600);font-weight:600;">Términos de uso</a> y la
+              <a href="#" style="color:var(--primary-600);font-weight:600;">Política de privacidad</a> de EduTech Academy.
+            </label>
+          </div>
+        </div>
+
+        <button type="submit" class="btn btn-primary w-full btn-lg">
+          Crear mi cuenta gratis →
+        </button>
+      </form>
+
+      <p class="auth-footer-text">
+        ¿Ya tienes cuenta? <a href="login.html">Iniciar sesión</a>
+      </p>
+
+    </div>
+  </main>
+
+  <script>
+    const toggle = document.getElementById('toggle-pass');
+    const passInput = document.getElementById('password');
+    toggle.addEventListener('click', () => {
+      passInput.type = passInput.type === 'password' ? 'text' : 'password';
+    });
+    toggle.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter' || e.key === ' ') toggle.click();
+    });
+  </script>
+
+</body>
+</html>

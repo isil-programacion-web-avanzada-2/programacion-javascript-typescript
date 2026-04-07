@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gestión de Estudiantes | EduTech Academy Admin</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <nav class="navbar" role="navigation" aria-label="Navegación administrativa">
+    <div class="container">
+      <a href="index.html" class="navbar-brand">
+        <div class="brand-icon" aria-hidden="true">🎓</div>
+        <span>Edu<em>Tech</em> <span style="font-size:var(--text-xs);font-weight:700;background:var(--danger-600);color:var(--white);padding:2px 8px;border-radius:var(--border-radius-full);">ADMIN</span></span>
+      </a>
+      <ul class="navbar-nav" role="list">
+        <li><a href="admin-dashboard.html">Dashboard</a></li>
+        <li><a href="admin-cursos.html">Cursos</a></li>
+        <li><a href="admin-estudiantes.html" class="active" aria-current="page">Estudiantes</a></li>
+        <li><a href="admin-docentes.html">Docentes</a></li>
+      </ul>
+      <div class="navbar-actions">
+        <div class="navbar-user">
+          <div class="avatar" style="background:linear-gradient(135deg,var(--danger-600),#9333ea);" aria-label="Administrador">AD</div>
+          <span style="font-size:var(--text-sm);font-weight:600;color:var(--gray-700);">Admin</span>
+        </div>
+        <button class="hamburger" id="hamburger" aria-label="Abrir menú" aria-expanded="false" aria-controls="mobile-nav">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+  <div class="mobile-nav" id="mobile-nav">
+    <a href="admin-dashboard.html">📊 Dashboard</a>
+    <a href="admin-cursos.html">📚 Cursos</a>
+    <a href="admin-estudiantes.html">👥 Estudiantes</a>
+    <a href="admin-docentes.html">👨‍🏫 Docentes</a>
+  </div>
+
+  <div class="page-content">
+    <div class="layout-with-sidebar">
+
+      <aside class="sidebar" id="sidebar" aria-label="Menú de administración">
+        <div class="sidebar-header">
+          <div class="sidebar-user">
+            <div class="avatar" style="background:linear-gradient(135deg,var(--danger-600),#9333ea);" aria-label="Administrador">AD</div>
+            <div class="user-info"><div class="name">Administrador</div><div class="role">Super Admin</div></div>
+          </div>
+          <div class="sidebar-title">Panel de control</div>
+        </div>
+        <nav class="sidebar-nav" aria-label="Navegación administrativa">
+          <a href="admin-dashboard.html"><span class="nav-icon" aria-hidden="true">📊</span> Dashboard</a>
+          <div class="sidebar-section-label">Gestión académica</div>
+          <a href="admin-cursos.html"><span class="nav-icon" aria-hidden="true">📚</span> Cursos<span class="sidebar-badge">48</span></a>
+          <a href="admin-estudiantes.html" class="active" aria-current="page"><span class="nav-icon" aria-hidden="true">👥</span> Estudiantes<span class="sidebar-badge">1240</span></a>
+          <a href="admin-docentes.html"><span class="nav-icon" aria-hidden="true">👨‍🏫</span> Docentes<span class="sidebar-badge">12</span></a>
+          <div class="sidebar-section-label">Sistema</div>
+          <a href="login.html"><span class="nav-icon" aria-hidden="true">🚪</span> Cerrar sesión</a>
+        </nav>
+      </aside>
+
+      <main class="main-content">
+        <nav class="breadcrumb" aria-label="Ruta de navegación">
+          <a href="admin-dashboard.html">Dashboard</a>
+          <span class="separator" aria-hidden="true">›</span>
+          <span class="current">Gestión de estudiantes</span>
+        </nav>
+
+        <div class="page-header">
+          <div class="page-header-row">
+            <div>
+              <h1 class="page-title">Gestión de estudiantes</h1>
+              <p class="page-subtitle">Administra las cuentas y el estado de todos los estudiantes registrados.</p>
+            </div>
+            <div style="display:flex;gap:var(--space-3);">
+              <button class="btn btn-ghost btn-sm">📥 Exportar CSV</button>
+              <button class="btn btn-primary btn-sm">+ Nuevo estudiante</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Stats rápidas -->
+        <div class="grid grid-4" style="margin-bottom:var(--space-6);">
+          <div class="stat-card">
+            <div class="stat-icon blue" aria-hidden="true">👥</div>
+            <div class="stat-content"><div class="stat-label">Total registrados</div><div class="stat-value">1,240</div></div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-icon green" aria-hidden="true">✅</div>
+            <div class="stat-content"><div class="stat-label">Activos</div><div class="stat-value">1,180</div></div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-icon yellow" aria-hidden="true">⏳</div>
+            <div class="stat-content"><div class="stat-label">Pendientes</div><div class="stat-value">43</div></div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-icon red" aria-hidden="true">🚫</div>
+            <div class="stat-content"><div class="stat-label">Suspendidos</div><div class="stat-value">17</div></div>
+          </div>
+        </div>
+
+        <!-- Filtros -->
+        <div class="card" style="margin-bottom:var(--space-6);">
+          <div style="display:flex;gap:var(--space-4);align-items:center;flex-wrap:wrap;">
+            <div class="search-bar" style="flex:1;min-width:200px;">
+              <span aria-hidden="true">🔍</span>
+              <input type="search" placeholder="Buscar por nombre, correo, programa..." aria-label="Buscar estudiante" />
+            </div>
+            <select class="form-control" style="width:auto;" aria-label="Filtrar por programa">
+              <option>Todos los programas</option>
+              <option>Ing. de Sistemas</option>
+              <option>Ing. de Software</option>
+              <option>Ing. Informática</option>
+            </select>
+            <select class="form-control" style="width:auto;" aria-label="Filtrar por estado">
+              <option>Todos los estados</option>
+              <option>Activo</option>
+              <option>Pendiente</option>
+              <option>Suspendido</option>
+            </select>
+          </div>
+        </div>
+
+        <!-- Tabla -->
+        <div class="table-wrapper">
+          <table class="table" aria-label="Tabla de gestión de estudiantes">
+            <thead>
+              <tr>
+                <th scope="col">Estudiante</th>
+                <th scope="col">Programa</th>
+                <th scope="col">Inscripciones</th>
+                <th scope="col">Completados</th>
+                <th scope="col">Fecha registro</th>
+                <th scope="col">Estado</th>
+                <th scope="col">Acciones</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>
+                  <div class="user-cell">
+                    <div class="avatar" aria-hidden="true">CG</div>
+                    <div class="user-info"><div class="name">Carlos García</div><div class="sub">cgarcia@edutech.pe</div></div>
+                  </div>
+                </td>
+                <td>Ing. de Sistemas</td>
+                <td>3</td>
+                <td>1</td>
+                <td>10 ene 2024</td>
+                <td><span class="badge badge-success">Activo</span></td>
+                <td>
+                  <div class="td-actions">
+                    <button class="btn btn-ghost btn-icon btn-sm" title="Ver perfil" aria-label="Ver perfil">👁️</button>
+                    <button class="btn btn-ghost btn-icon btn-sm" title="Editar" aria-label="Editar">✏️</button>
+                    <button class="btn btn-ghost btn-icon btn-sm" title="Suspender" aria-label="Suspender" style="color:var(--warning-600);">🔕</button>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="user-cell">
+                    <div class="avatar" style="background:linear-gradient(135deg,#7c3aed,#ec4899);" aria-hidden="true">AL</div>
+                    <div class="user-info"><div class="name">Andrea López</div><div class="sub">alopez@edutech.pe</div></div>
+                  </div>
+                </td>
+                <td>Ing. Informática</td>
+                <td>2</td>
+                <td>2</td>
+                <td>15 ene 2024</td>
+                <td><span class="badge badge-success">Activo</span></td>
+                <td>
+                  <div class="td-actions">
+                    <button class="btn btn-ghost btn-icon btn-sm" title="Ver perfil" aria-label="Ver perfil">👁️</button>
+                    <button class="btn btn-ghost btn-icon btn-sm" title="Editar" aria-label="Editar">✏️</button>
+                    <button class="btn btn-ghost btn-icon btn-sm" title="Suspender" aria-label="Suspender" style="color:var(--warning-600);">🔕</button>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="user-cell">
+                    <div class="avatar" style="background:linear-gradient(135deg,#059669,#0891b2);" aria-hidden="true">RM</div>
+                    <div class="user-info"><div class="name">Roberto Méndez</div><div class="sub">rmendez@edutech.pe</div></div>
+                  </div>
+                </td>
+                <td>Ing. de Software</td>
+                <td>1</td>
+                <td>0</td>
+                <td>20 feb 2024</td>
+                <td><span class="badge badge-warning">Pendiente</span></td>
+                <td>
+                  <div class="td-actions">
+                    <button class="btn btn-success btn-sm" aria-label="Aprobar estudiante">Aprobar</button>
+                    <button class="btn btn-ghost btn-icon btn-sm" title="Ver perfil" aria-label="Ver perfil">👁️</button>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="user-cell">
+                    <div class="avatar" style="background:linear-gradient(135deg,#d97706,#f59e0b);" aria-hidden="true">SC</div>
+                    <div class="user-info"><div class="name">Sofía Castillo</div><div class="sub">scastillo@edutech.pe</div></div>
+                  </div>
+                </td>
+                <td>Ing. de Sistemas</td>
+                <td>4</td>
+                <td>3</td>
+                <td>05 feb 2024</td>
+                <td><span class="badge badge-success">Activo</span></td>
+                <td>
+                  <div class="td-actions">
+                    <button class="btn btn-ghost btn-icon btn-sm" title="Ver perfil" aria-label="Ver perfil">👁️</button>
+                    <button class="btn btn-ghost btn-icon btn-sm" title="Editar" aria-label="Editar">✏️</button>
+                    <button class="btn btn-ghost btn-icon btn-sm" title="Suspender" aria-label="Suspender" style="color:var(--warning-600);">🔕</button>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="user-cell">
+                    <div class="avatar" style="background:var(--gray-400);" aria-hidden="true">MF</div>
+                    <div class="user-info"><div class="name">Miguel Flores</div><div class="sub">mflores@edutech.pe</div></div>
+                  </div>
+                </td>
+                <td>Ing. Informática</td>
+                <td>1</td>
+                <td>0</td>
+                <td>01 mar 2024</td>
+                <td><span class="badge badge-danger">Suspendido</span></td>
+                <td>
+                  <div class="td-actions">
+                    <button class="btn btn-ghost btn-sm" aria-label="Reactivar estudiante">Reactivar</button>
+                    <button class="btn btn-ghost btn-icon btn-sm" style="color:var(--danger-600);" aria-label="Eliminar">🗑️</button>
+                  </div>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <nav class="pagination" aria-label="Paginación">
+          <button class="page-btn" disabled>‹</button>
+          <button class="page-btn active" aria-current="page">1</button>
+          <button class="page-btn">2</button>
+          <button class="page-btn">...</button>
+          <button class="page-btn">24</button>
+          <button class="page-btn">›</button>
+        </nav>
+
+      </main>
+    </div>
+  </div>
+
+  <script>
+    const btn = document.getElementById('hamburger');
+    const nav = document.getElementById('mobile-nav');
+    btn.addEventListener('click', () => { const open = nav.classList.toggle('open'); btn.setAttribute('aria-expanded', open); });
+  </script>
+</body>
+</html>

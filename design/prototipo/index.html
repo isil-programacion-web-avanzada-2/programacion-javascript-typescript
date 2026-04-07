@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="EduTech — Plataforma de gestión de cursos e inscripciones universitarias" />
+  <title>EduTech Academy | Plataforma de Cursos e Inscripciones</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- ===== NAVBAR ===== -->
+  <nav class="navbar" role="navigation" aria-label="Navegación principal">
+    <div class="container">
+      <a href="index.html" class="navbar-brand" aria-label="EduTech Academy inicio">
+        <div class="brand-icon" aria-hidden="true">🎓</div>
+        <span>Edu<em>Tech</em></span>
+      </a>
+
+      <ul class="navbar-nav" role="list">
+        <li><a href="index.html" class="active" aria-current="page">Inicio</a></li>
+        <li><a href="cursos.html">Cursos</a></li>
+        <li><a href="#beneficios">Beneficios</a></li>
+      </ul>
+
+      <div class="navbar-actions">
+        <a href="login.html" class="btn btn-ghost btn-sm">Iniciar sesión</a>
+        <a href="registro.html" class="btn btn-primary btn-sm">Registrarse</a>
+        <button class="hamburger" id="hamburger" aria-label="Abrir menú" aria-expanded="false" aria-controls="mobile-nav">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Mobile Nav -->
+  <div class="mobile-nav" id="mobile-nav" role="navigation" aria-label="Menú móvil">
+    <a href="index.html">🏠 Inicio</a>
+    <a href="cursos.html">📚 Cursos</a>
+  </div>
+
+  <main class="page-content">
+
+    <!-- ===== HERO ===== -->
+    <section class="hero" aria-labelledby="hero-heading">
+      <div class="container">
+        <div class="hero-content">
+          <div class="hero-eyebrow" aria-label="Certificados por universidades">
+            ✦ Plataforma académica certificada
+          </div>
+          <h1 id="hero-heading" class="hero-title">
+            Aprende, crece y<br>
+            <span class="highlight">lidera el futuro</span><br>
+            tecnológico
+          </h1>
+          <p class="hero-subtitle">
+            Formación de calidad universitaria en programación, desarrollo web, backend, bases de datos y más. Accede desde cualquier dispositivo.
+          </p>
+          <div class="hero-actions">
+            <a href="cursos.html" class="btn btn-primary btn-lg">Explorar cursos</a>
+            <a href="registro.html" class="btn btn-secondary btn-lg" style="background:transparent;color:#fff;border-color:rgba(255,255,255,.4);">Crear cuenta gratis</a>
+          </div>
+          <div class="hero-stats" role="list" aria-label="Estadísticas de la plataforma">
+            <div class="hero-stat" role="listitem">
+              <div class="value">1,240+</div>
+              <div class="label">Estudiantes activos</div>
+            </div>
+            <div class="hero-stat" role="listitem">
+              <div class="value">48</div>
+              <div class="label">Cursos disponibles</div>
+            </div>
+            <div class="hero-stat" role="listitem">
+              <div class="value">12</div>
+              <div class="label">Docentes expertos</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== BENEFICIOS ===== -->
+    <section class="section bg-gray" id="beneficios" aria-labelledby="beneficios-heading">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-label">¿Por qué EduTech?</span>
+          <h2 id="beneficios-heading" class="section-title">Todo lo que necesitas para aprender</h2>
+          <p class="section-subtitle">Una plataforma pensada para estudiantes universitarios y profesionales que buscan crecer en tecnología.</p>
+        </div>
+        <div class="grid grid-3">
+          <article class="benefit-card">
+            <div class="benefit-icon" style="background:var(--primary-100);" aria-hidden="true">📖</div>
+            <h3>Cursos estructurados</h3>
+            <p>Contenido organizado por módulos, sesiones y actividades prácticas, diseñados por docentes universitarios con experiencia real en la industria.</p>
+          </article>
+          <article class="benefit-card">
+            <div class="benefit-icon" style="background:var(--accent-100);" aria-hidden="true">🖥️</div>
+            <h3>Acceso multiplataforma</h3>
+            <p>Estudia desde tu computador, tablet o celular. Tu progreso se sincroniza automáticamente en todos tus dispositivos.</p>
+          </article>
+          <article class="benefit-card">
+            <div class="benefit-icon" style="background:var(--success-100);" aria-hidden="true">🏆</div>
+            <h3>Certificados reconocidos</h3>
+            <p>Al completar cada curso obtienes un certificado de finalización con aval académico, útil para tu portafolio profesional.</p>
+          </article>
+          <article class="benefit-card">
+            <div class="benefit-icon" style="background:var(--warning-100);" aria-hidden="true">⚡</div>
+            <h3>Aprendizaje activo</h3>
+            <p>Ejercicios prácticos, proyectos reales y evaluaciones formativas que refuerzan cada concepto aprendido.</p>
+          </article>
+          <article class="benefit-card">
+            <div class="benefit-icon" style="background:var(--danger-100);" aria-hidden="true">👥</div>
+            <h3>Comunidad de aprendizaje</h3>
+            <p>Conecta con compañeros y docentes a través de foros, sesiones en vivo y grupos de estudio colaborativo.</p>
+          </article>
+          <article class="benefit-card">
+            <div class="benefit-icon" style="background:var(--primary-100);" aria-hidden="true">📊</div>
+            <h3>Seguimiento de avance</h3>
+            <p>Visualiza tu progreso en tiempo real con métricas claras sobre tu rendimiento, asistencia y finalización de actividades.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== CURSOS DESTACADOS ===== -->
+    <section class="section" aria-labelledby="cursos-heading">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-label">Cursos destacados</span>
+          <h2 id="cursos-heading" class="section-title">Los más populares este semestre</h2>
+          <p class="section-subtitle">Seleccionados por nuestros docentes y calificados por estudiantes activos.</p>
+        </div>
+        <div class="grid grid-3">
+
+          <!-- Curso 1 -->
+          <article class="course-card">
+            <div class="course-card-image" style="background:linear-gradient(135deg,#1e3a5f,#2563eb);">
+              <div class="course-thumb-placeholder" aria-label="Imagen curso Programación Web II">⚛️</div>
+              <span class="course-card-badge badge badge-primary no-dot">Frontend</span>
+            </div>
+            <div class="course-card-body">
+              <div class="course-category">Frontend</div>
+              <h3 class="course-title">Programación Web II</h3>
+              <p class="course-instructor">👨‍🏫 Juan Pérez · <strong>4.8 ★</strong></p>
+              <div class="course-meta">
+                <span class="course-meta-item">🕒 40 horas</span>
+                <span class="course-meta-item">🎥 Video + LMS</span>
+                <span class="course-meta-item">👥 320 alumnos</span>
+              </div>
+            </div>
+            <div class="course-card-footer">
+              <div class="course-price"><span class="currency">S/</span> 120</div>
+              <a href="detalle-curso.html" class="btn btn-primary btn-sm">Ver curso</a>
+            </div>
+          </article>
+
+          <!-- Curso 2 -->
+          <article class="course-card">
+            <div class="course-card-image" style="background:linear-gradient(135deg,#1a1a2e,#7c3aed);">
+              <div class="course-thumb-placeholder" aria-label="Imagen curso Desarrollo Frontend con React">⚡</div>
+              <span class="course-card-badge badge badge-accent no-dot">Full Stack</span>
+            </div>
+            <div class="course-card-body">
+              <div class="course-category">Full Stack</div>
+              <h3 class="course-title">Desarrollo Frontend con React</h3>
+              <p class="course-instructor">👩‍🏫 María Torres · <strong>4.9 ★</strong></p>
+              <div class="course-meta">
+                <span class="course-meta-item">🕒 60 horas</span>
+                <span class="course-meta-item">🎥 Video + Labs</span>
+                <span class="course-meta-item">👥 510 alumnos</span>
+              </div>
+            </div>
+            <div class="course-card-footer">
+              <div class="course-price"><span class="currency">S/</span> 180</div>
+              <a href="detalle-curso.html" class="btn btn-primary btn-sm">Ver curso</a>
+            </div>
+          </article>
+
+          <!-- Curso 3 -->
+          <article class="course-card">
+            <div class="course-card-image" style="background:linear-gradient(135deg,#064e3b,#059669);">
+              <div class="course-thumb-placeholder" aria-label="Imagen curso Backend con Node.js">🚀</div>
+              <span class="course-card-badge badge badge-success no-dot">Backend</span>
+            </div>
+            <div class="course-card-body">
+              <div class="course-category">Backend</div>
+              <h3 class="course-title">Backend con Node.js</h3>
+              <p class="course-instructor">👨‍🏫 Luis Ramírez · <strong>4.7 ★</strong></p>
+              <div class="course-meta">
+                <span class="course-meta-item">🕒 55 horas</span>
+                <span class="course-meta-item">🎥 Video + Proyectos</span>
+                <span class="course-meta-item">👥 280 alumnos</span>
+              </div>
+            </div>
+            <div class="course-card-footer">
+              <div class="course-price"><span class="currency">S/</span> 150</div>
+              <a href="detalle-curso.html" class="btn btn-primary btn-sm">Ver curso</a>
+            </div>
+          </article>
+
+          <!-- Curso 4 -->
+          <article class="course-card">
+            <div class="course-card-image" style="background:linear-gradient(135deg,#431407,#ea580c);">
+              <div class="course-thumb-placeholder" aria-label="Imagen curso Seguridad en Aplicaciones Web">🔐</div>
+              <span class="course-card-badge badge badge-warning no-dot">Seguridad</span>
+            </div>
+            <div class="course-card-body">
+              <div class="course-category">Seguridad</div>
+              <h3 class="course-title">Seguridad en Aplicaciones Web</h3>
+              <p class="course-instructor">👨‍🏫 Juan Pérez · <strong>4.9 ★</strong></p>
+              <div class="course-meta">
+                <span class="course-meta-item">🕒 35 horas</span>
+                <span class="course-meta-item">🎥 Video + CTF</span>
+                <span class="course-meta-item">👥 190 alumnos</span>
+              </div>
+            </div>
+            <div class="course-card-footer">
+              <div class="course-price"><span class="currency">S/</span> 200</div>
+              <a href="detalle-curso.html" class="btn btn-primary btn-sm">Ver curso</a>
+            </div>
+          </article>
+
+          <!-- Curso 5 -->
+          <article class="course-card">
+            <div class="course-card-image" style="background:linear-gradient(135deg,#1e1b4b,#4338ca);">
+              <div class="course-thumb-placeholder" aria-label="Imagen curso Bases de Datos NoSQL">🗃️</div>
+              <span class="course-card-badge badge badge-primary no-dot">Base de Datos</span>
+            </div>
+            <div class="course-card-body">
+              <div class="course-category">Base de Datos</div>
+              <h3 class="course-title">Bases de Datos NoSQL</h3>
+              <p class="course-instructor">👩‍🏫 María Torres · <strong>4.6 ★</strong></p>
+              <div class="course-meta">
+                <span class="course-meta-item">🕒 30 horas</span>
+                <span class="course-meta-item">🎥 Video + Labs</span>
+                <span class="course-meta-item">👥 145 alumnos</span>
+              </div>
+            </div>
+            <div class="course-card-footer">
+              <div class="course-price"><span class="free">Gratuito</span></div>
+              <a href="detalle-curso.html" class="btn btn-success btn-sm">Ver curso</a>
+            </div>
+          </article>
+
+          <!-- Curso 6 -->
+          <article class="course-card">
+            <div class="course-card-image" style="background:linear-gradient(135deg,#0c4a6e,#0891b2);">
+              <div class="course-thumb-placeholder" aria-label="Imagen curso DevOps y CI/CD">🔧</div>
+              <span class="course-card-badge badge badge-gray no-dot">DevOps</span>
+            </div>
+            <div class="course-card-body">
+              <div class="course-category">DevOps</div>
+              <h3 class="course-title">DevOps y CI/CD con GitHub Actions</h3>
+              <p class="course-instructor">👨‍🏫 Luis Ramírez · <strong>4.8 ★</strong></p>
+              <div class="course-meta">
+                <span class="course-meta-item">🕒 45 horas</span>
+                <span class="course-meta-item">🎥 Video + Cloud</span>
+                <span class="course-meta-item">👥 220 alumnos</span>
+              </div>
+            </div>
+            <div class="course-card-footer">
+              <div class="course-price"><span class="currency">S/</span> 160</div>
+              <a href="detalle-curso.html" class="btn btn-primary btn-sm">Ver curso</a>
+            </div>
+          </article>
+
+        </div>
+
+        <div style="text-align:center;margin-top:var(--space-10);">
+          <a href="cursos.html" class="btn btn-secondary btn-lg">Ver todos los cursos →</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== DOCENTES ===== -->
+    <section class="section bg-gray" aria-labelledby="docentes-heading">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-label">Nuestro equipo</span>
+          <h2 id="docentes-heading" class="section-title">Docentes expertos en tecnología</h2>
+          <p class="section-subtitle">Profesionales activos en la industria que comparten su experiencia real.</p>
+        </div>
+        <div class="grid grid-3">
+          <div class="card" style="text-align:center;">
+            <div class="avatar xl" style="margin:0 auto var(--space-4);" aria-label="Foto de Juan Pérez">JP</div>
+            <h4>Juan Pérez</h4>
+            <p style="font-size:var(--text-sm);color:var(--primary-600);font-weight:600;margin-bottom:var(--space-2);">Especialista Frontend</p>
+            <p style="font-size:var(--text-sm);">10 años de experiencia en React, Vue y Angular. Ex-developer en startups de Lima.</p>
+            <div style="margin-top:var(--space-4);display:flex;justify-content:center;gap:var(--space-2);">
+              <span class="badge badge-primary no-dot">React</span>
+              <span class="badge badge-accent no-dot">Vue</span>
+              <span class="badge badge-gray no-dot">TypeScript</span>
+            </div>
+          </div>
+          <div class="card" style="text-align:center;">
+            <div class="avatar xl" style="margin:0 auto var(--space-4);background:linear-gradient(135deg,#7c3aed,#ec4899);" aria-label="Foto de María Torres">MT</div>
+            <h4>María Torres</h4>
+            <p style="font-size:var(--text-sm);color:var(--accent-600);font-weight:600;margin-bottom:var(--space-2);">Arquitecta Full Stack</p>
+            <p style="font-size:var(--text-sm);">Arquitecta de software con enfoque en sistemas distribuidos, MongoDB y microservicios.</p>
+            <div style="margin-top:var(--space-4);display:flex;justify-content:center;gap:var(--space-2);">
+              <span class="badge badge-success no-dot">Node.js</span>
+              <span class="badge badge-primary no-dot">MongoDB</span>
+              <span class="badge badge-gray no-dot">Docker</span>
+            </div>
+          </div>
+          <div class="card" style="text-align:center;">
+            <div class="avatar xl" style="margin:0 auto var(--space-4);background:linear-gradient(135deg,#059669,#0891b2);" aria-label="Foto de Luis Ramírez">LR</div>
+            <h4>Luis Ramírez</h4>
+            <p style="font-size:var(--text-sm);color:var(--success-600);font-weight:600;margin-bottom:var(--space-2);">Ingeniero DevOps</p>
+            <p style="font-size:var(--text-sm);">DevOps engineer con experiencia en AWS, CI/CD pipelines y automatización de infraestructura.</p>
+            <div style="margin-top:var(--space-4);display:flex;justify-content:center;gap:var(--space-2);">
+              <span class="badge badge-warning no-dot">AWS</span>
+              <span class="badge badge-gray no-dot">Kubernetes</span>
+              <span class="badge badge-success no-dot">Terraform</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== CTA ===== -->
+    <section class="cta-section" aria-labelledby="cta-heading">
+      <div class="container">
+        <h2 id="cta-heading">¿Listo para comenzar tu formación?</h2>
+        <p>Únete a más de 1,200 estudiantes que ya están construyendo su futuro en tecnología con EduTech Academy.</p>
+        <div style="display:flex;justify-content:center;gap:var(--space-4);flex-wrap:wrap;">
+          <a href="registro.html" class="btn btn-lg" style="background:var(--white);color:var(--primary-600);font-weight:700;">Crear cuenta gratuita</a>
+          <a href="cursos.html" class="btn btn-lg" style="background:transparent;color:var(--white);border:2px solid rgba(255,255,255,.5);">Ver catálogo →</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer" aria-label="Pie de página">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <div class="footer-brand">
+            <div class="brand-icon" aria-hidden="true">🎓</div>
+            EduTech Academy
+          </div>
+          <p class="footer-desc">Plataforma universitaria de gestión de cursos e inscripciones. Formación tecnológica de calidad para el siglo XXI.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Cursos</h4>
+          <a href="cursos.html">Frontend</a>
+          <a href="cursos.html">Backend</a>
+          <a href="cursos.html">Full Stack</a>
+          <a href="cursos.html">DevOps</a>
+          <a href="cursos.html">Seguridad</a>
+        </div>
+        <div class="footer-col">
+          <h4>Plataforma</h4>
+          <a href="login.html">Iniciar sesión</a>
+          <a href="registro.html">Registrarse</a>
+          <a href="dashboard-estudiante.html">Mi panel</a>
+          <a href="mis-inscripciones.html">Mis cursos</a>
+          <a href="perfil.html">Perfil</a>
+        </div>
+        <div class="footer-col">
+          <h4>Soporte</h4>
+          <a href="#">Centro de ayuda</a>
+          <a href="#">Preguntas frecuentes</a>
+          <a href="#">Política de privacidad</a>
+          <a href="#">Términos de uso</a>
+          <a href="#">Contacto</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2024 EduTech Academy. Todos los derechos reservados.</span>
+        <span>Construido para el curso de Ingeniería de Software</span>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const btn = document.getElementById('hamburger');
+    const nav = document.getElementById('mobile-nav');
+    btn.addEventListener('click', () => {
+      const open = nav.classList.toggle('open');
+      btn.setAttribute('aria-expanded', open);
+    });
+  </script>
+
+</body>
+</html>

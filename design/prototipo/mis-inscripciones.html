@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mis Inscripciones | EduTech Academy</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar" role="navigation" aria-label="Navegación del panel">
+    <div class="container">
+      <a href="index.html" class="navbar-brand">
+        <div class="brand-icon" aria-hidden="true">🎓</div>
+        <span>Edu<em>Tech</em></span>
+      </a>
+      <ul class="navbar-nav" role="list">
+        <li><a href="dashboard-estudiante.html">Mi panel</a></li>
+        <li><a href="cursos.html">Explorar</a></li>
+        <li><a href="mis-inscripciones.html" class="active" aria-current="page">Mis inscripciones</a></li>
+      </ul>
+      <div class="navbar-actions">
+        <div class="navbar-user">
+          <div class="avatar" aria-hidden="true">CG</div>
+          <span style="font-size:var(--text-sm);font-weight:600;color:var(--gray-700);">Carlos G.</span>
+        </div>
+        <button class="hamburger" id="hamburger" aria-label="Abrir menú" aria-expanded="false" aria-controls="mobile-nav">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+  <div class="mobile-nav" id="mobile-nav">
+    <a href="dashboard-estudiante.html">🏠 Mi panel</a>
+    <a href="mis-inscripciones.html">📋 Mis inscripciones</a>
+    <a href="perfil.html">👤 Mi perfil</a>
+    <a href="login.html">🚪 Salir</a>
+  </div>
+
+  <div class="page-content">
+    <div class="layout-with-sidebar">
+
+      <!-- SIDEBAR -->
+      <aside class="sidebar" id="sidebar" aria-label="Menú lateral">
+        <div class="sidebar-header">
+          <div class="sidebar-user">
+            <div class="avatar" aria-label="Foto de Carlos García">CG</div>
+            <div class="user-info">
+              <div class="name">Carlos García</div>
+              <div class="role">Estudiante</div>
+            </div>
+          </div>
+          <div class="sidebar-title">Panel estudiantil</div>
+        </div>
+        <nav class="sidebar-nav" aria-label="Navegación del panel">
+          <a href="dashboard-estudiante.html"><span class="nav-icon" aria-hidden="true">🏠</span> Inicio</a>
+          <a href="mis-inscripciones.html" class="active" aria-current="page"><span class="nav-icon" aria-hidden="true">📚</span> Mis inscripciones<span class="sidebar-badge">3</span></a>
+          <a href="cursos.html"><span class="nav-icon" aria-hidden="true">🔍</span> Explorar</a>
+          
+          <div class="sidebar-section-label">Cuenta</div>
+          <a href="perfil.html"><span class="nav-icon" aria-hidden="true">👤</span> Mi perfil</a>
+          <a href="login.html"><span class="nav-icon" aria-hidden="true">🚪</span> Cerrar sesión</a>
+        </nav>
+      </aside>
+
+      <!-- MAIN -->
+      <main class="main-content">
+        <nav class="breadcrumb" aria-label="Ruta de navegación">
+          <a href="dashboard-estudiante.html">Mi panel</a>
+          <span class="separator" aria-hidden="true">›</span>
+          <span class="current">Mis inscripciones</span>
+        </nav>
+
+        <div class="page-header">
+          <div class="page-header-row">
+            <div>
+              <h1 class="page-title">Mis inscripciones</h1>
+              <p class="page-subtitle">Gestiona y da seguimiento a todos tus cursos inscritos.</p>
+            </div>
+            <a href="cursos.html" class="btn btn-primary">+ Nuevo curso</a>
+          </div>
+        </div>
+
+        <!-- Tabs -->
+        <div class="tabs" role="tablist" aria-label="Filtrar inscripciones">
+          <button class="tab-item active" role="tab" aria-selected="true">Todos (3)</button>
+          <button class="tab-item" role="tab" aria-selected="false">En progreso (2)</button>
+          <button class="tab-item" role="tab" aria-selected="false">Completados (1)</button>
+        </div>
+
+        <!-- Tabla de inscripciones -->
+        <div class="table-wrapper">
+          <table class="table" aria-label="Tabla de inscripciones">
+            <thead>
+              <tr>
+                <th scope="col">Curso</th>
+                <th scope="col">Docente</th>
+                <th scope="col">Fecha de inscripción</th>
+                <th scope="col">Modalidad</th>
+                <th scope="col">Progreso</th>
+                <th scope="col">Estado</th>
+                <th scope="col">Acciones</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>
+                  <div class="user-cell">
+                    <div style="width:42px;height:42px;background:linear-gradient(135deg,#1a1a2e,#7c3aed);border-radius:var(--border-radius);display:flex;align-items:center;justify-content:center;font-size:1.25rem;flex-shrink:0;" aria-hidden="true">⚡</div>
+                    <div class="user-info">
+                      <div class="name">Desarrollo Frontend con React</div>
+                      <div class="sub">Full Stack · 60 horas</div>
+                    </div>
+                  </div>
+                </td>
+                <td>María Torres</td>
+                <td>15 feb 2024</td>
+                <td><span class="badge badge-primary no-dot">Virtual</span></td>
+                <td>
+                  <div style="display:flex;align-items:center;gap:var(--space-2);">
+                    <div class="progress-bar-bg" style="width:100px;" aria-label="72% completado">
+                      <div class="progress-bar" style="width:72%;"></div>
+                    </div>
+                    <span style="font-size:var(--text-xs);font-weight:700;color:var(--primary-600);">72%</span>
+                  </div>
+                </td>
+                <td><span class="badge badge-primary">En progreso</span></td>
+                <td>
+                  <div class="td-actions">
+                    <a href="detalle-curso.html" class="btn btn-primary btn-sm">Continuar</a>
+                    <button class="btn btn-ghost btn-icon" title="Ver detalles" aria-label="Ver detalles del curso">ℹ️</button>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="user-cell">
+                    <div style="width:42px;height:42px;background:linear-gradient(135deg,#064e3b,#059669);border-radius:var(--border-radius);display:flex;align-items:center;justify-content:center;font-size:1.25rem;flex-shrink:0;" aria-hidden="true">🚀</div>
+                    <div class="user-info">
+                      <div class="name">Backend con Node.js</div>
+                      <div class="sub">Backend · 55 horas</div>
+                    </div>
+                  </div>
+                </td>
+                <td>Luis Ramírez</td>
+                <td>01 mar 2024</td>
+                <td><span class="badge badge-primary no-dot">Virtual</span></td>
+                <td>
+                  <div style="display:flex;align-items:center;gap:var(--space-2);">
+                    <div class="progress-bar-bg" style="width:100px;" aria-label="38% completado">
+                      <div class="progress-bar warning" style="width:38%;"></div>
+                    </div>
+                    <span style="font-size:var(--text-xs);font-weight:700;color:var(--warning-600);">38%</span>
+                  </div>
+                </td>
+                <td><span class="badge badge-warning">En progreso</span></td>
+                <td>
+                  <div class="td-actions">
+                    <a href="detalle-curso.html" class="btn btn-primary btn-sm">Continuar</a>
+                    <button class="btn btn-ghost btn-icon" title="Ver detalles" aria-label="Ver detalles del curso">ℹ️</button>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="user-cell">
+                    <div style="width:42px;height:42px;background:linear-gradient(135deg,#1e3a5f,#2563eb);border-radius:var(--border-radius);display:flex;align-items:center;justify-content:center;font-size:1.25rem;flex-shrink:0;" aria-hidden="true">⚛️</div>
+                    <div class="user-info">
+                      <div class="name">Programación Web II</div>
+                      <div class="sub">Frontend · 40 horas</div>
+                    </div>
+                  </div>
+                </td>
+                <td>Juan Pérez</td>
+                <td>10 ene 2024</td>
+                <td><span class="badge badge-accent no-dot">Híbrida</span></td>
+                <td>
+                  <div style="display:flex;align-items:center;gap:var(--space-2);">
+                    <div class="progress-bar-bg" style="width:100px;" aria-label="100% completado">
+                      <div class="progress-bar success" style="width:100%;"></div>
+                    </div>
+                    <span style="font-size:var(--text-xs);font-weight:700;color:var(--success-600);">100%</span>
+                  </div>
+                </td>
+                <td><span class="badge badge-success">Completado</span></td>
+                <td>
+                  <div class="td-actions">
+                    <button class="btn btn-success btn-sm">🏆 Certificado</button>
+                    <button class="btn btn-ghost btn-icon" title="Ver detalles" aria-label="Ver detalles del curso">ℹ️</button>
+                  </div>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <!-- Resumen estadístico -->
+        <div class="grid grid-3" style="margin-top:var(--space-8);">
+          <div class="card" style="text-align:center;">
+            <div style="font-size:2.5rem;font-weight:900;color:var(--primary-600);">S/ 450</div>
+            <div style="font-size:var(--text-sm);color:var(--text-muted);">Total invertido</div>
+          </div>
+          <div class="card" style="text-align:center;">
+            <div style="font-size:2.5rem;font-weight:900;color:var(--success-600);">87h</div>
+            <div style="font-size:var(--text-sm);color:var(--text-muted);">Horas completadas</div>
+          </div>
+          <div class="card" style="text-align:center;">
+            <div style="font-size:2.5rem;font-weight:900;color:var(--accent-600);">70%</div>
+            <div style="font-size:var(--text-sm);color:var(--text-muted);">Promedio de avance</div>
+          </div>
+        </div>
+
+      </main>
+    </div>
+  </div>
+
+  <script>
+    const btn = document.getElementById('hamburger');
+    const nav = document.getElementById('mobile-nav');
+    btn.addEventListener('click', () => { const open = nav.classList.toggle('open'); btn.setAttribute('aria-expanded', open); });
+    document.querySelectorAll('.tab-item').forEach(tab => {
+      tab.addEventListener('click', function() {
+        document.querySelectorAll('.tab-item').forEach(t => { t.classList.remove('active'); t.setAttribute('aria-selected','false'); });
+        this.classList.add('active'); this.setAttribute('aria-selected','true');
+      });
+    });
+  </script>
+</body>
+</html>

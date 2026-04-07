@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mi Panel | EduTech Academy</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar" role="navigation" aria-label="Navegación del panel">
+    <div class="container">
+      <a href="index.html" class="navbar-brand">
+        <div class="brand-icon" aria-hidden="true">🎓</div>
+        <span>Edu<em>Tech</em></span>
+      </a>
+      <ul class="navbar-nav" role="list">
+        <li><a href="dashboard-estudiante.html" class="active" aria-current="page">Mi panel</a></li>
+        <li><a href="cursos.html">Explorar cursos</a></li>
+        <li><a href="mis-inscripciones.html">Mis inscripciones</a></li>
+      </ul>
+      <div class="navbar-actions">
+        <div class="navbar-user" tabindex="0" role="button" aria-label="Menú de usuario de Carlos García">
+          <div class="avatar" aria-hidden="true">CG</div>
+          <span style="font-size:var(--text-sm);font-weight:600;color:var(--gray-700);">Carlos G.</span>
+          <span aria-hidden="true" style="color:var(--gray-400);">▾</span>
+        </div>
+        <button class="hamburger" id="hamburger" aria-label="Abrir menú" aria-expanded="false" aria-controls="mobile-nav">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+  <div class="mobile-nav" id="mobile-nav">
+    <a href="dashboard-estudiante.html">🏠 Mi panel</a>
+    <a href="cursos.html">📚 Explorar cursos</a>
+    <a href="mis-inscripciones.html">📋 Mis inscripciones</a>
+    <a href="perfil.html">👤 Mi perfil</a>
+    <a href="login.html">🚪 Cerrar sesión</a>
+  </div>
+
+  <div class="page-content">
+    <div class="layout-with-sidebar">
+
+      <!-- SIDEBAR -->
+      <aside class="sidebar" id="sidebar" aria-label="Menú lateral del estudiante">
+        <div class="sidebar-header">
+          <div class="sidebar-user">
+            <div class="avatar" aria-label="Foto de Carlos García">CG</div>
+            <div class="user-info">
+              <div class="name">Carlos García</div>
+              <div class="role">Estudiante</div>
+            </div>
+          </div>
+          <div class="sidebar-title">Panel estudiantil</div>
+        </div>
+
+        <nav class="sidebar-nav" aria-label="Navegación del panel">
+          <a href="dashboard-estudiante.html" class="active" aria-current="page">
+            <span class="nav-icon" aria-hidden="true">🏠</span> Inicio
+          </a>
+          <a href="mis-inscripciones.html">
+            <span class="nav-icon" aria-hidden="true">📚</span> Mis inscripciones
+            <span class="sidebar-badge">3</span>
+          </a>
+          <a href="cursos.html">
+            <span class="nav-icon" aria-hidden="true">🔍</span> Explorar
+          </a>
+
+          
+          <div class="sidebar-section-label">Cuenta</div>
+          <a href="perfil.html">
+            <span class="nav-icon" aria-hidden="true">👤</span> Mi perfil
+          </a>
+          <a href="login.html">
+            <span class="nav-icon" aria-hidden="true">🚪</span> Cerrar sesión
+          </a>
+        </nav>
+      </aside>
+
+      <!-- MAIN CONTENT -->
+      <main class="main-content" id="main-content">
+
+        <!-- Welcome header -->
+        <div class="page-header">
+          <div class="page-header-row">
+            <div>
+              <h1 class="page-title">¡Hola, Carlos! 👋</h1>
+              <p class="page-subtitle">Aquí tienes un resumen de tu actividad académica de hoy, lunes 06 de abril de 2026.</p>
+            </div>
+            <a href="cursos.html" class="btn btn-primary">+ Explorar cursos</a>
+          </div>
+        </div>
+
+        <!-- Stats -->
+        <div class="grid grid-4" style="margin-bottom:var(--space-8);" role="list" aria-label="Estadísticas del estudiante">
+          <div class="stat-card" role="listitem">
+            <div class="stat-icon blue" aria-hidden="true">📚</div>
+            <div class="stat-content">
+              <div class="stat-label">Cursos inscritos</div>
+              <div class="stat-value">3</div>
+              <div class="stat-change up">↑ +1 este mes</div>
+            </div>
+          </div>
+          <div class="stat-card" role="listitem">
+            <div class="stat-icon green" aria-hidden="true">✅</div>
+            <div class="stat-content">
+              <div class="stat-label">Completados</div>
+              <div class="stat-value">1</div>
+              <div class="stat-change up">↑ 33% finalización</div>
+            </div>
+          </div>
+          <div class="stat-card" role="listitem">
+            <div class="stat-icon yellow" aria-hidden="true">🕒</div>
+            <div class="stat-content">
+              <div class="stat-label">Horas aprendidas</div>
+              <div class="stat-value">87</div>
+              <div class="stat-change up">↑ +12 esta semana</div>
+            </div>
+          </div>
+          <div class="stat-card" role="listitem">
+            <div class="stat-icon purple" aria-hidden="true">🏆</div>
+            <div class="stat-content">
+              <div class="stat-label">Certificados</div>
+              <div class="stat-value">1</div>
+              <div class="stat-change up">↑ +1 este mes</div>
+            </div>
+          </div>
+        </div>
+
+        <div style="display:grid;grid-template-columns:1fr 340px;gap:var(--space-6);">
+
+          <!-- Left column -->
+          <div>
+            <!-- Cursos en progreso -->
+            <div class="card" style="margin-bottom:var(--space-6);">
+              <div class="card-header">
+                <h2 class="card-title">Mis cursos activos</h2>
+                <a href="mis-inscripciones.html" class="btn btn-ghost btn-sm">Ver todos →</a>
+              </div>
+
+              <div class="enrollment-row">
+                <div class="enrollment-icon" style="background:linear-gradient(135deg,#1a1a2e,#7c3aed);" aria-hidden="true">⚡</div>
+                <div class="enrollment-info">
+                  <div class="title">Desarrollo Frontend con React</div>
+                  <div class="meta">👩‍🏫 María Torres · 60 horas · Virtual</div>
+                </div>
+                <div class="enrollment-progress" aria-label="Progreso 72%">
+                  <div class="progress-container">
+                    <div class="progress-header">
+                      <span style="font-size:var(--text-xs);color:var(--text-muted);">Progreso</span>
+                      <span style="font-size:var(--text-xs);font-weight:700;color:var(--primary-600);">72%</span>
+                    </div>
+                    <div class="progress-bar-bg"><div class="progress-bar" style="width:72%;"></div></div>
+                  </div>
+                </div>
+                <div class="enrollment-actions">
+                  <a href="detalle-curso.html" class="btn btn-primary btn-sm">Continuar</a>
+                </div>
+              </div>
+
+              <div class="enrollment-row">
+                <div class="enrollment-icon" style="background:linear-gradient(135deg,#064e3b,#059669);" aria-hidden="true">🚀</div>
+                <div class="enrollment-info">
+                  <div class="title">Backend con Node.js</div>
+                  <div class="meta">👨‍🏫 Luis Ramírez · 55 horas · Virtual</div>
+                </div>
+                <div class="enrollment-progress" aria-label="Progreso 38%">
+                  <div class="progress-container">
+                    <div class="progress-header">
+                      <span style="font-size:var(--text-xs);color:var(--text-muted);">Progreso</span>
+                      <span style="font-size:var(--text-xs);font-weight:700;color:var(--warning-600);">38%</span>
+                    </div>
+                    <div class="progress-bar-bg"><div class="progress-bar warning" style="width:38%;"></div></div>
+                  </div>
+                </div>
+                <div class="enrollment-actions">
+                  <a href="detalle-curso.html" class="btn btn-primary btn-sm">Continuar</a>
+                </div>
+              </div>
+
+              <div class="enrollment-row">
+                <div class="enrollment-icon" style="background:linear-gradient(135deg,#1e3a5f,#2563eb);" aria-hidden="true">⚛️</div>
+                <div class="enrollment-info">
+                  <div class="title">Programación Web II</div>
+                  <div class="meta">👨‍🏫 Juan Pérez · 40 horas · Virtual</div>
+                </div>
+                <div class="enrollment-progress" aria-label="Progreso 100% completado">
+                  <div class="progress-container">
+                    <div class="progress-header">
+                      <span style="font-size:var(--text-xs);color:var(--text-muted);">Progreso</span>
+                      <span style="font-size:var(--text-xs);font-weight:700;color:var(--success-600);">100%</span>
+                    </div>
+                    <div class="progress-bar-bg"><div class="progress-bar success" style="width:100%;"></div></div>
+                  </div>
+                </div>
+                <div class="enrollment-actions">
+                  <button class="btn btn-success btn-sm">🏆 Certificado</button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Próximas clases -->
+            <div class="card">
+              <div class="card-header">
+                <h2 class="card-title">Próximas clases</h2>
+                <a href="#" class="btn btn-ghost btn-sm">Ver calendario →</a>
+              </div>
+
+              <div style="display:flex;flex-direction:column;gap:var(--space-4);">
+                <div style="display:flex;align-items:center;gap:var(--space-4);padding:var(--space-3) 0;border-bottom:1px solid var(--gray-100);">
+                  <div style="background:var(--primary-50);border-radius:var(--border-radius);padding:var(--space-3) var(--space-4);text-align:center;flex-shrink:0;">
+                    <div style="font-size:var(--text-xs);color:var(--primary-600);font-weight:700;text-transform:uppercase;">ABR</div>
+                    <div style="font-size:var(--text-2xl);font-weight:900;color:var(--primary-600);line-height:1;">07</div>
+                  </div>
+                  <div style="flex:1;">
+                    <div style="font-weight:700;font-size:var(--text-sm);">React Avanzado: Performance Optimization</div>
+                    <div style="font-size:var(--text-xs);color:var(--text-muted);">Desarrollo Frontend con React · 7:00 PM - 9:00 PM</div>
+                  </div>
+                  <span class="badge badge-primary no-dot">En vivo</span>
+                </div>
+                <div style="display:flex;align-items:center;gap:var(--space-4);padding:var(--space-3) 0;border-bottom:1px solid var(--gray-100);">
+                  <div style="background:var(--success-100);border-radius:var(--border-radius);padding:var(--space-3) var(--space-4);text-align:center;flex-shrink:0;">
+                    <div style="font-size:var(--text-xs);color:var(--success-600);font-weight:700;text-transform:uppercase;">ABR</div>
+                    <div style="font-size:var(--text-2xl);font-weight:900;color:var(--success-600);line-height:1;">09</div>
+                  </div>
+                  <div style="flex:1;">
+                    <div style="font-weight:700;font-size:var(--text-sm);">Node.js: Autenticación JWT</div>
+                    <div style="font-size:var(--text-xs);color:var(--text-muted);">Backend con Node.js · 6:00 PM - 8:00 PM</div>
+                  </div>
+                  <span class="badge badge-gray no-dot">Grabado</span>
+                </div>
+                <div style="display:flex;align-items:center;gap:var(--space-4);padding:var(--space-3) 0;">
+                  <div style="background:var(--accent-100);border-radius:var(--border-radius);padding:var(--space-3) var(--space-4);text-align:center;flex-shrink:0;">
+                    <div style="font-size:var(--text-xs);color:var(--accent-600);font-weight:700;text-transform:uppercase;">ABR</div>
+                    <div style="font-size:var(--text-2xl);font-weight:900;color:var(--accent-600);line-height:1;">12</div>
+                  </div>
+                  <div style="flex:1;">
+                    <div style="font-weight:700;font-size:var(--text-sm);">Evaluación Módulo 3 — React Router</div>
+                    <div style="font-size:var(--text-xs);color:var(--text-muted);">Desarrollo Frontend con React · Entrega antes de las 11:59 PM</div>
+                  </div>
+                  <span class="badge badge-warning no-dot">Evaluación</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right column -->
+          <div style="display:flex;flex-direction:column;gap:var(--space-6);">
+
+            <!-- Perfil resumido -->
+            <div class="card" style="text-align:center;">
+              <div class="avatar xl" style="margin:0 auto var(--space-4);" aria-label="Foto de Carlos García">CG</div>
+              <h3 style="font-size:var(--text-lg);">Carlos García</h3>
+              <p style="font-size:var(--text-sm);color:var(--primary-600);font-weight:600;margin-bottom:var(--space-4);">Ingeniería de Sistemas</p>
+              <div style="display:flex;justify-content:center;gap:var(--space-6);margin-bottom:var(--space-5);">
+                <div style="text-align:center;">
+                  <div style="font-size:var(--text-xl);font-weight:800;color:var(--text-primary);">3</div>
+                  <div style="font-size:var(--text-xs);color:var(--text-muted);">Cursos</div>
+                </div>
+                <div style="text-align:center;">
+                  <div style="font-size:var(--text-xl);font-weight:800;color:var(--text-primary);">87h</div>
+                  <div style="font-size:var(--text-xs);color:var(--text-muted);">Aprendidas</div>
+                </div>
+                <div style="text-align:center;">
+                  <div style="font-size:var(--text-xl);font-weight:800;color:var(--text-primary);">1</div>
+                  <div style="font-size:var(--text-xs);color:var(--text-muted);">Certificados</div>
+                </div>
+              </div>
+              <a href="perfil.html" class="btn btn-ghost w-full btn-sm">Editar perfil</a>
+            </div>
+
+            <!-- Cursos recomendados -->
+            <div class="card">
+              <h3 class="card-title" style="margin-bottom:var(--space-5);">Recomendados para ti</h3>
+              <div style="display:flex;flex-direction:column;gap:var(--space-4);">
+                <div style="display:flex;align-items:center;gap:var(--space-3);">
+                  <div style="width:48px;height:48px;background:linear-gradient(135deg,#431407,#ea580c);border-radius:var(--border-radius);display:flex;align-items:center;justify-content:center;font-size:1.5rem;flex-shrink:0;" aria-hidden="true">🔐</div>
+                  <div style="flex:1;min-width:0;">
+                    <div style="font-weight:600;font-size:var(--text-sm);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;">Seguridad en Aplicaciones Web</div>
+                    <div style="font-size:var(--text-xs);color:var(--text-muted);">⭐ 4.9 · S/ 200</div>
+                  </div>
+                </div>
+                <div style="display:flex;align-items:center;gap:var(--space-3);">
+                  <div style="width:48px;height:48px;background:linear-gradient(135deg,#1e1b4b,#4338ca);border-radius:var(--border-radius);display:flex;align-items:center;justify-content:center;font-size:1.5rem;flex-shrink:0;" aria-hidden="true">🗃️</div>
+                  <div style="flex:1;min-width:0;">
+                    <div style="font-weight:600;font-size:var(--text-sm);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;">Bases de Datos NoSQL</div>
+                    <div style="font-size:var(--text-xs);color:var(--text-muted);">⭐ 4.6 · Gratuito</div>
+                  </div>
+                </div>
+              </div>
+              <a href="cursos.html" class="btn btn-ghost w-full btn-sm" style="margin-top:var(--space-4);">Ver catálogo →</a>
+            </div>
+
+          </div>
+        </div>
+
+      </main>
+    </div>
+  </div>
+
+  <script>
+    const btn = document.getElementById('hamburger');
+    const nav = document.getElementById('mobile-nav');
+    btn.addEventListener('click', () => {
+      const open = nav.classList.toggle('open');
+      btn.setAttribute('aria-expanded', open);
+    });
+  </script>
+</body>
+</html>
