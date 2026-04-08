@@ -6,7 +6,7 @@ Este paquete contiene documentación base en formato Markdown para presentar, ad
 **Plataforma de Gestión de Cursos e Inscripciones**
 
 ## Propósito del paquete
-Organizar el trabajo del curso como un proyecto progresivo que crece por sesiones y por capas:
+Organizacion del trabajo del curso como un proyecto progresivo en sesiones y por capas:
 
 - diseño base en HTML + CSS
 - fundamentos con JavaScript moderno y TypeScript
