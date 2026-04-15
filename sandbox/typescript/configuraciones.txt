@@ -1,0 +1,48 @@
+
+npm install --save-dev webpack webpack-cli typescript ts-loader
+
+------------------------------  webpack.config.js
+const path = require("path");
+
+module.exports = {
+  mode: "development",
+  entry: "./src/index.ts",
+  module: {
+    rules: [
+      {
+        test: /\.ts$/,
+        use: "ts-loader",
+        exclude: /node_modules/,
+      },
+    ],
+  },
+  resolve: {
+    extensions: [".ts", ".js"],
+  },
+  output: {
+    filename: "bundle.js",
+    path: path.resolve(__dirname, "dist"),
+  },
+};
+
+------------------------------ tsconfig.json
+{
+  "compilerOptions": {
+    "target": "es6",
+    "module": "esnext",
+    "strict": true,
+    "sourceMap": true
+  },
+  "include": ["src/**/*"]
+}
+ 
+
+------------------------------
+crear carpeta src
+crear index.ts
+
+
+-------------------------
+
+
+npx webpack
