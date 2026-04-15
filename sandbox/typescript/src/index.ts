@@ -1,0 +1,1 @@
+import {Lista} from "../5-genericos";
