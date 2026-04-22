@@ -1,0 +1,25 @@
+
+
+<h2>Ejemplo de directivas</h2>
+
+@if(usuario){
+  <p>Usuario encontrado: {{usuario.nombre}}</p>
+
+  @for (item of usuario.items; track item.id) {
+    <p>{{ item.name }}</p>
+
+  }
+}
+
+<div [ngClass]="{ active: esActivo}">
+  Estado visual con NgClass
+</div>
+
+
+<div [ngStyle]="{ color: colorFavorito }">
+  Texto con color dinámico
+</div>
+
+
+<h1>{{ mensaje }}</h1>
+<app-lista-producto></app-lista-producto>
