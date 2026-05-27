@@ -1,0 +1,13 @@
+<p>validar works!</p>
+
+<form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+  <input formControlName="email" placeholder="Correo" />
+  <input formControlName="password" placeholder="Contraseña" type="password"/>
+
+  <button type="submit" [disabled]="loginForm.invalid">Ingresar</button>
+</form>
+
+
+@if( loginForm.get('email')?.invalid && loginForm.get('email')?.touched ){
+  <p class="error"> Correo invalido o requerido</p>
+}

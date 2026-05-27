@@ -1,0 +1,6 @@
+<p>usuario works!</p>
+
+
+@for(user of users | async; track user.id){
+  <p>{{ user.name}}</p>
+}
