@@ -1,0 +1,18 @@
+/*
+ADD CSS
+*/
+main {
+  min-height: 100vh;
+  padding: 40px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.fondo-claro {
+  background-color: white;
+  color: black;
+}
+
+.fondo-oscuro {
+  background-color: #121212;
+  color: white;
+}
